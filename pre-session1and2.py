@@ -14,3 +14,22 @@ Make sure to provide an explanation of the changes you made and how they address
 This task will help you practice debugging, code refactoring, and improving code quality by addressing common issues
 and applying best practices.
 '''
+def calc_average(scores):
+    total_score = 0
+    number_of_scores = len(scores)
+
+    # check for an empty list
+    if number_of_scores == 0:
+        return 0
+
+    for score in scores:
+        total_score += score
+
+    average = total_score / number_of_scores
+    return round(average,2)
+
+# CASE 1
+score_list = [56, 75, 92, 88, 56]
+print(calc_average(score_list))
+
+# CASE 2
