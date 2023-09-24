@@ -15,21 +15,29 @@ This task will help you practice debugging, code refactoring, and improving code
 and applying best practices.
 '''
 def calc_average(scores):
-    total_score = 0
-    number_of_scores = len(scores)
+    
+    total_score = 0 #variable to keep track of total score
+    number_of_scores = len(scores) #get total number os scores
 
     # check for an empty list
     if number_of_scores == 0:
         return 0
-
+    
+    #loop through the scores and get the sum total
     for score in scores:
         total_score += score
-
+    
+    #find the average score
     average = total_score / number_of_scores
-    return round(average,2)
+    
+    return round(average, 2) #return the average score rounded to 2 decimal places.
+
 
 # CASE 1
 score_list = [56, 75, 92, 88, 56]
 print(calc_average(score_list))
 
 # CASE 2
+score_list2 = []
+print(calc_average(score_list2))
+
