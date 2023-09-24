@@ -41,3 +41,11 @@ print(calc_average(score_list))
 score_list2 = []
 print(calc_average(score_list2))
 
+# CASE 3
+score_list3 = [56, 75.0, 92, 88.5]
+print(calc_average(score_list3))
+
+# CASE 4
+score_list4 = [56, 75.0]
+print(calc_average(score_list4))
+#Output: 65.5
