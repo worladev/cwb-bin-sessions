@@ -53,11 +53,24 @@ def convert_to_hex(number):
         number //= 16
 
     hex_num = ''.join(converted)
+    
+    #if number is negative, add a minus sign to it
+    if negative_num:
+        hex_num = '-' + hex_num
 
     return hex_num
 
 # CASE 1
 print(convert_to_hex(16))    # Output: "10"
 
-# CASE 1
+# CASE 2
 print(convert_to_hex(-10))   # Output: "-A"
+
+# CASE 3
+print(convert_to_hex(255))   # Output: "FF"
+
+# CASE 4
+print(convert_to_hex(-167))   # Output: "-A7"
+
+# CASE 5
+print(convert_to_hex(0))   # Output: "0"
