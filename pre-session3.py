@@ -15,3 +15,39 @@ the bugs and code quality improvements.
 This task will help you practice debugging, code refactoring, and improving code quality by addressing
 common issues and applying best practices.
 '''
+#1 Rename function
+def convert_to_hex(number):
+
+    #3 Rename variable to hold converted hexadecimal number
+    converted = []
+    
+    #while loop to process conversion
+    while number > 0:
+        remainder = number % 16
+
+        if remainder < 10:
+            converted.insert(0, str(remainder))
+        elif remainder == 10:
+            converted.insert(0, 'A')
+        elif remainder == 11:
+            converted.insert(0, 'B')
+        elif remainder == 12:
+            converted.insert(0, 'C')
+        elif remainder == 13:
+            converted.insert(0, 'D')
+        elif remainder == 14:
+            converted.insert(0, 'E')
+        else:
+            converted.insert(0, 'F')
+
+        number //= 16
+
+    hex_num = ''.join(converted)
+
+    return hex_num
+
+# CASE 1
+print(convert_to_hex(16))    # Output: "10"
+
+# CASE 1
+print(convert_to_hex(-10))   # Output: "-A"
