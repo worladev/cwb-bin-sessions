@@ -17,11 +17,21 @@ common issues and applying best practices.
 '''
 #1 Rename function
 def convert_to_hex(number):
+    
+    # if number is 0, return number.
+    if number == 0:
+        return number
+    
+    #keep track of negative numbers
+    negative_num = False
+    if number < 0:
+        negative_num = True
+        number = abs(number)
 
-    #3 Rename variable to hold converted hexadecimal number
+    # Rename variable to hold converted hexadecimal number
     converted = []
     
-    #while loop to process conversion
+    # while loop to process conversion
     while number > 0:
         remainder = number % 16
 
