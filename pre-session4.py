@@ -74,3 +74,19 @@ else:
     print("Access denied")
 # refactoring needed.
 
+
+'''
+Scenario 4: Temperature Classification
+Write a Python program that takes the temperature as input. If the temperature is less than 0 degrees
+Celsius OR greater than 30 degrees Celsius, the program should display "Extreme weather conditions.
+Stay indoors." Otherwise, it should display "Enjoy the day!"
+'''
+#accept temperature input from user 
+temp = int(input("Enter temperature: "))
+
+#display message based on temperature input
+if temp < 0 or temp > 30:
+    print("Exteme weather conditions. Stay indoors.")
+else:
+    print("Enjoy the day!")
+
