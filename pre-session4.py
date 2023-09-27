@@ -17,6 +17,17 @@ if sat == 'yes':
 else:
     it_is_sat = False
     
+#receive second input and check if it is 'yes' or 'no'
+sun = input("Is it Sunday? (enter yes/no): ")
+if sun == 'yes':
+    it_is_sun = True
+else:
+    it_is_sun = False
 
+#display message based on input received
+if it_is_sat or it_is_sun:
+    print("Let's have fun!")
+else:
+    print("Weekdays are for work.")
 
 
