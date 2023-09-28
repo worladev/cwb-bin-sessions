@@ -64,7 +64,7 @@ Scenario 3: Password Verification
 Write a Python program that asks the user to enter a password. If the password matches "Secret123,"
 the program should display "Access granted." Otherwise, it should display "Access denied."
 '''
-# refactoring needed.
+# refactoring needed in pre-session 5.
 correct_password = "Secret123"
 
 passw = input("Enter your password: ")
@@ -72,7 +72,7 @@ if passw == correct_password:
     print("Access granted")
 else:
     print("Access denied")
-# refactoring needed.
+# refactoring needed in pre-session 5.
 
 
 '''
