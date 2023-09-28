@@ -30,3 +30,16 @@ while (invalid_password):
             special_characters += 1
         else:
             continue
+    #check for password validity.
+    if (lower_case >= 1 and upper_case >= 1 and numbers >= 1 and special_characters >= 1 and length_of_password >= 8):
+        invalid_password = False
+        
+        #check for password strength
+        if length_of_password >= 12:
+            print("password is valid and very strong")
+        elif length_of_password >= 10 and length_of_password < 12:
+            print("password is valid and moderate")
+        else:
+            print("password is valid but weak")
+    else:
+        print("invalid password")
