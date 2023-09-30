@@ -48,3 +48,10 @@ list_of_words3 = [
 
 #Test with an empty list
 print(word_length_finder(list_of_words, 3))
+
+#Test with a list containing 1 or more words
+print(word_length_finder(list_of_words1, 3))
+print(word_length_finder(list_of_words2, 3))
+print(word_length_finder(list_of_words2, 5))
+print(word_length_finder(list_of_words3, 4))
+print(word_length_finder(list_of_words3, 6))
