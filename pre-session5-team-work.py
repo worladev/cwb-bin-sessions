@@ -3,7 +3,6 @@ Password Validation Task - Code Refactoring for pre-session 4
 '''
 import string
 
-
 invalid_password = True
 
 #while loop to check if all requirements for the password has been met
@@ -30,6 +29,7 @@ while (invalid_password):
             special_characters += 1
         else:
             continue
+    
     #check for password validity.
     if (lower_case >= 1 and upper_case >= 1 and numbers >= 1 and special_characters >= 1 and length_of_password >= 8):
         invalid_password = False
@@ -43,3 +43,4 @@ while (invalid_password):
             print("password is valid but weak")
     else:
         print("invalid password")
+
