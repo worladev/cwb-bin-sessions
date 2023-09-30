@@ -36,3 +36,15 @@ def word_length_finder(word_list, length):
     return new_word_list
 
 
+#TEST CASES
+list_of_words = []
+list_of_words1 = ["man"]
+list_of_words2 = ["man", "go", "tense"]
+list_of_words3 = [
+    "man", "many", "orange", "hall", "callous",
+    "viral", "native", "bulb", "tense", "island",
+    "meal", "top", "dashing", "needless", "ear"
+    ]
+
+#Test with an empty list
+print(word_length_finder(list_of_words, 3))
