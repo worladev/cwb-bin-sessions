@@ -71,3 +71,8 @@ print(find_eligible(ssn_list1))
 # CASE 2
 ssn_list2 = ['123456789', '987654321', '555555555', '123456789', '111111111']
 print(find_eligible(ssn_list2))
+
+# CASE 3
+ssn_list3 = ['123456789', '987654321', '555555555', '123456789', '111111111', '555555555', '010342433']
+# print(find_eligible(ssn_list3))
+
