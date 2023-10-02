@@ -60,6 +60,13 @@ def find_eligible(id_list):
   return output_string
 
 
+# CASE - empty list
+ssn_list = []
+print(find_eligible(ssn_list))
+
+# CASE 1
+ssn_list1 = ['123456789']
+print(find_eligible(ssn_list1))
 
 # CASE 2
 ssn_list2 = ['123456789', '987654321', '555555555', '123456789', '111111111']
