@@ -31,3 +31,36 @@ Voters who registered more than once: ['123456789']
   - Display duplicate ID's in l.
   
 '''
+# Solution to Second Session Task
+
+def find_eligible(id_list):
+  # a set variable to hold id's to avoid duplicates
+  unique_list = set()
+
+  # a list variable to hold id's that are registered more than once.
+  multiple_id = set() #---> refactored to a set type
+
+  # a loop to check for unique id's and id's that appear more than once.
+  for id in id_list:
+    if id in unique_list:
+      multiple_id.add(id) # add duplicate id's to multiple_id
+    else:
+      unique_list.add(id) # add unique id's to unique_id
+
+  # getting the number of unique registered id's
+  unique_list_length = len(unique_list)
+
+  # a formated string containing the length of eligible and duplicate voters.
+  output_string = f'''
+  Actual number of eligible voters: {unique_list_length}
+  Voters who registered more than once: {multiple_id}
+  '''
+
+  # return formated string
+  return output_string
+
+
+
+# CASE 2
+ssn_list2 = ['123456789', '987654321', '555555555', '123456789', '111111111']
+print(find_eligible(ssn_list2))
