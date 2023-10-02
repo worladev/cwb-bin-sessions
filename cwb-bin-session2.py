@@ -20,5 +20,14 @@ Output:
 Actual number of eligible voters: 4
 Voters who registered more than once: ['123456789']
 
-
+- ALGORITHM
+  - Create a new set variable l.
+  - Create a new set variable j.
+  - Loop through the input list
+   - if ID in j append ID to l.
+   - else add ID to j.
+  - Get the number of unique ID's in j as eligible voters.
+  - Display total number of eligible voters in j.
+  - Display duplicate ID's in l.
+  
 '''
