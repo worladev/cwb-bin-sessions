@@ -23,4 +23,12 @@ print("Number of apples:", apple_count)
 numbers = ['3', '7', '2', '3', '1', '1', '3', '3', '7']
 three_count = custom_count(number, '3')
 print("Number of threes:", three_count)
+
+
+ALGORITHM
+- create a variable count initialised to 0
+- loop through the list lst
+- compare element of each index in lst to specified element
+- if lst item is the same as element, increment count by 1 else continue
+- return count value
 '''
