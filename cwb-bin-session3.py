@@ -59,3 +59,17 @@ names = []
 name_count = custom_count(names, 'Confidence')
 print("Number of names:", name_count)
 
+# one item list and empty parameter for element
+names2 = ['Mike']
+name2_count = custom_count(names2, '')
+print("Number of names:", name2_count)
+
+# list with more items
+fruits = ['apple', 'banana', 'orange', 'apple', 'grape', 'apple']
+apple_count = custom_count(fruits, 'apple')
+print("Number of apples:", apple_count)
+
+# number list and an item not in the list as element parameter
+numbers = ['7', '1']
+five_count = custom_count(numbers, '5')
+print("Number of threes:", five_count)
