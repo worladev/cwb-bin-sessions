@@ -32,3 +32,30 @@ ALGORITHM
 - if lst item is the same as element, increment count by 1 else continue
 - return count value
 '''
+def custom_count(lst, element):
+
+  # a variable to hold the count of the specified element
+  count = 0
+
+  # a variable to get the number of items in the list
+  length = len(lst)
+
+  # a condition to return 0 if the list is empty
+  if length == 0:
+    return 0
+
+  # a loop to check through each index and determine if it contains
+    # the specified element. if it does, increment count by one.
+  for item in lst:
+    if item == element:
+      count += 1
+
+  # return the value of count
+  return count
+
+#Test Cases
+#empty list
+names = []
+name_count = custom_count(names, 'Confidence')
+print("Number of names:", name_count)
+
