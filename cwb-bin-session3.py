@@ -73,3 +73,8 @@ print("Number of apples:", apple_count)
 numbers = ['7', '1']
 five_count = custom_count(numbers, '5')
 print("Number of threes:", five_count)
+
+# number list with more items
+numbers2 = ['3', '7', '2', '3', '1', '1', '3', '3', '7']
+three_count = custom_count(numbers2, '3')
+print("Number of threes:", three_count)
