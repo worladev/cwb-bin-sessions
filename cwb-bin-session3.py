@@ -1,5 +1,5 @@
 '''
-SESSION 2 (09/08/2023)
+SESSION 3 (14/08/2023)
 Mentor and Facilitator ==> ANDY AFFUL
 
 Title: Custom List Counter - Implement Your Own count() Function
