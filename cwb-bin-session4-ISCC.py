@@ -41,4 +41,13 @@ word3 = "clean"
 result3 = find_first_duplicate(word3)
 print(result3)  # Output: 'None'
 
+# Example Case 4:
+word4 = "communication"
+result4 = find_first_duplicate(word4)
+print(result4) # Output: 'm'
+
+# Example Case 5:
+word5 = "frank"
+result5 = find_first_duplicate(word5)
+print(result5) # Output: 'None'
 
