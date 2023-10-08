@@ -26,5 +26,19 @@ def find_first_duplicate(string):
 
    return None #return None if there are no duplicate letters
 
+# Example Case 1:
+word1 = "mississippi"
+result1 = find_first_duplicate(word1)
+print(result1)  # Output: 's'
+
+# Example Case 2:
+word2 = "ghana"
+result2 = find_first_duplicate(word2)
+print(result2)  # Output: 'a'
+
+# Example Case 3:
+word3 = "clean"
+result3 = find_first_duplicate(word3)
+print(result3)  # Output: 'None'
 
 
