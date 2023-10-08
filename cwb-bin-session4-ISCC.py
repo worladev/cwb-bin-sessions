@@ -13,17 +13,18 @@ INSTRUCTION: Implement a Python function find_first_duplicate(s) that takes the 
 s: A string consisting of lowercase English letters.
 The function should return the first letter that appears twice in the string s. If no letter appears twice,
 return None.
-
-Example:
-word1 = "mississippi"
-result1 = find_first_duplicate(word1)
-print(result1)  # Output: 's'
-
-word2 = "ghana"
-result2 = find_first_duplicate(word2)
-print(result2)  # Output: 'a'
-
-word3 = "clean"
-result3 = find_first_duplicate(word3)
-print(result3)  # Output: 'None'
 '''
+def find_first_duplicate(string):
+   dupes = set() #variable to hold characters
+
+   #loop to add characters to dupes and return first duplicate
+   for character in string:
+     if character in dupes:
+        return character
+     else:
+        dupes.add(character)
+
+   return None #return None if there are no duplicate letters
+
+
+
