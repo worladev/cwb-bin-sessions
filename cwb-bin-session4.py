@@ -40,3 +40,37 @@ Hint: Consider using tuples to represent daily meal plans, where each tuple cont
 supper combination. You can then store these tuples in a list to keep track of all the possible meal
 plans within your budget.
 '''
+def plan_meals(breakfast_prices, supper_prices, daily_budget):
+    
+    # a list variable possible_meals to hold all valid daily meals within budget.
+    possible_meals = list()
+
+    # a tuple variable to hold one valid meal within budget.
+    meal = tuple()
+
+    # a condition to return an empty list if any input item has no element in it.
+    if len(breakfast_prices) == 0 or len(supper_prices) == 0 or daily_budget == 0:
+        return possible_meals
+
+    # a nested loop that get each breakfast price and supper price.
+    # add them, if the sum falls within the daily budget add it to the
+    # possible_meal list as a tupple object.
+    for i in breakfast_prices:
+        for j in supper_prices:
+            if i == 0 or j == 0 or daily_budget == 0:
+                continue
+            elif i + j <= daily_budget:
+                meal = (i, j)
+                possible_meals.append(meal)
+
+    return possible_meals
+
+
+# Example Case 1
+breakfast_prices = [5, 7, 3, 10]
+supper_prices = [8, 5, 9, 7]
+daily_budget = 14
+possible_meal = plan_meals(breakfast_prices, supper_prices, daily_budget)
+print(possible_meal)
+
+
