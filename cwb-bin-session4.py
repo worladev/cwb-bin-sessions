@@ -73,4 +73,18 @@ daily_budget = 14
 possible_meal = plan_meals(breakfast_prices, supper_prices, daily_budget)
 print(possible_meal)
 
+# Example Case 2 - one empty argument
+breakfast_prices2 = [5, 7, 3, 10]
+supper_prices2 = []
+daily_budget2 = 14
+possible_meal2 = plan_meals(breakfast_prices2, supper_prices2, daily_budget2)
+print(possible_meal2)
+
+# Example Case 3 - floating point values for some prices
+breakfast_prices3 = [5, 7.59, 3, 10.99]
+supper_prices3 = [8.58, 5, 9.99, 7.5]
+daily_budget3 = 14
+possible_meal3 = plan_meals(breakfast_prices3, supper_prices3, daily_budget3)
+print(possible_meal3)
+
 
