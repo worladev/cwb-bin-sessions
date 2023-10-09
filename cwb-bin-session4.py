@@ -87,4 +87,17 @@ daily_budget3 = 14
 possible_meal3 = plan_meals(breakfast_prices3, supper_prices3, daily_budget3)
 print(possible_meal3)
 
+# Example Case 4 - invalid prices
+breakfast_prices4 = [5, 0, 0, 0]
+supper_prices4 = [8, 5, 9, 7]
+daily_budget4 = 14
+possible_meal4 = plan_meals(breakfast_prices4, supper_prices4, daily_budget4)
+print(possible_meal4)
+
+# Example Case 5 - no budget
+breakfast_prices5 = [5, 7, 3, 10]
+supper_prices5 = [8, 5, 9, 7]
+daily_budget5 = 0
+possible_meal5 = plan_meals(breakfast_prices5, supper_prices5, daily_budget5)
+print(possible_meal5)
 
