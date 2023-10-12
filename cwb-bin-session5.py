@@ -31,3 +31,5 @@ def change_case(word):
 
 # Example Cases
 print(change_case("conFiDeNcE"))
+print(change_case("WorLAsi"))
+print(change_case("pYTHon"))
