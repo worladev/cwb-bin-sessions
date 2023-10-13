@@ -28,4 +28,36 @@ group1 = [1, 3, 5, 7, 9]
 group2 = [3, 5, 8, 10, 12]
 shared_questions = find_shared_questions(group1, group2)
 print(shared_questions)  # Output: [3, 5]
+
+ALGORITHM
+- create list variable l to hold question IDs solved by the two groups
+- create 2 set variable and cast the list into them to remove duplicated IDs
+- loop through group1 list of IDs
+- check if same ID is in group2 ID list
+- if yes, append ID to list l
+- return list l
 '''
+def find_shared_questions(group1, group2):
+    #a list variable to hold the ID solved by both groups
+    shared_questions = list()
+
+    #a check for empty list from any of the group
+    if len(group1) == 0 or len(group2) == 0:
+        return shared_questions
+
+    #loop through group 1 ID list and check if same ID is in group 2s list
+    # if yes, append that ID to a list
+    for item in group1:
+        if item in group2:
+            shared_questions.append(item)
+
+    #return the list of same IDs
+    return shared_questions
+
+
+# Test Cases
+group1 = [1, 3, 5, 7, 9]
+group2 = [2, 4, 6, 8, 10]
+shared_questions = find_shared_questions(group1, group2)
+print(shared_questions)  # Output: []
+
