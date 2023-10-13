@@ -35,4 +35,6 @@ def digital_root(number):
      return number
 
 # Example Case
-print(digital_root(45893))
+print(digital_root(45893)) # Output: 2
+print(digital_root(98)) # Output: 8
+print(digital_root(198450)) # Output: 9
