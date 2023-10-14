@@ -55,9 +55,26 @@ def find_shared_questions(group1, group2):
     return shared_questions
 
 
-# Test Cases
+# Example Case 1
 group1 = [1, 3, 5, 7, 9]
 group2 = [2, 4, 6, 8, 10]
 shared_questions = find_shared_questions(group1, group2)
 print(shared_questions)  # Output: []
 
+# Example Case 2
+group1 = [1, 3, 5, 7, 9]
+group2 = [3, 5, 8, 10, 12]
+shared_questions2 = find_shared_questions(group1, group2)
+print(shared_questions2)  # Output: [3, 5]
+
+# Example Case 3
+group1 = []
+group2 = [3, 5, 8, 10, 12]
+shared_questions3 = find_shared_questions(group1, group2)
+print(shared_questions3)  # Output: []
+
+# Example Case 4
+group1 = [1, 3, 5, 7, 8, 9]
+group2 = [3, 5, 8, 10, 12]
+shared_questions4 = find_shared_questions(group1, group2)
+print(shared_questions4)  # Output: [3, 5, 8]
