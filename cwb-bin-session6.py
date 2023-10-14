@@ -2,8 +2,9 @@
 SESSION 6 (23/08/2023)
 Mentor and Facilitator ==> ANDY AFFUL
 
+TITLE: "Shared Questions Solver"
 
-PROBLEM STATEMENT: Shared Questions Solver --> The CWB instructor gave two groups of students a list of coding
+PROBLEM STATEMENT: The CWB instructor gave two groups of students a list of coding
 questions to solve. Our task is to write a Python program that helps you identify the questions that were solved
 by both groups. Each group's list of solved questions is represented as a list of question IDs.
 
