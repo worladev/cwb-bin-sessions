@@ -41,9 +41,11 @@ def find_shared_questions(group1, group2):
     #a list variable to hold the ID solved by both groups
     shared_questions = list()
 
-    #a check for empty list from any of the group
-    if len(group1) == 0 or len(group2) == 0:
-        return shared_questions
+    #a check for null or empty list from any of the group    
+    if group1 is None or len(group1) <= 0:
+      return shared_questions
+    if group2 is None or len(group2) <= 0:
+      return shared_questions
 
     #loop through group 1 ID list and check if same ID is in group 2s list
     # if yes, append that ID to a list
