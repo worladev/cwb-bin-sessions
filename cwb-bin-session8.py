@@ -76,3 +76,19 @@ def curved_grading(scores):
 
    return curved_grade
 
+
+
+# Example- case 1 mode:90
+scores = [90, 90, 90, 80, 75, 65, 65]
+final_grade = curved_grading(scores)
+print(final_grade) #Output: 9.04
+
+# Example- case 2 mode:0
+scores2 = []
+final_grade2 = curved_grading(scores2)
+print(final_grade2) #Output: None
+
+# Example- case 3 mode:95
+scores3 = [90, 90, 90, 80, 75, 65, 65, 95, 95, 95]
+final_grade3 = curved_grading(scores3)
+print(final_grade3) #Output: 9.13
