@@ -62,3 +62,11 @@ def guess_the_page(book_pages):
 
   return target_page_number
 
+
+# Test Cases
+book_pages = list()  # list variable to hold number of pages in the book.
+for num in range(1, 701): # a for loop to add each page number to the list variable.
+   book_pages.append(num)
+
+print(guess_the_page(book_pages))
+
