@@ -92,3 +92,23 @@ print(final_grade2) #Output: None
 scores3 = [90, 90, 90, 80, 75, 65, 65, 95, 95, 95]
 final_grade3 = curved_grading(scores3)
 print(final_grade3) #Output: 9.13
+
+# Example- case 4 mode:80
+scores4 = [90, 80, 80, 75, 65, 95]
+final_grade4 = curved_grading(scores4)
+print(final_grade4) #Output: 9.0
+
+# Example- case 5 mode:65
+scores5 = [90, 80, 75, 65, 65, 65, 95]
+final_grade5 = curved_grading(scores5)
+print(final_grade5)  # Output: 9.0
+
+# Example- case 6 mode:50
+scores6 = [90, 80, 75, 65, 50, 50]
+final_grade6 = curved_grading(scores6)
+print(final_grade6)  # Output: 8.49
+
+# Example- case 7 mode:80
+scores7 = [90, 80, 80, 75, 65, 50, 50]
+final_grade7 = curved_grading(scores7)
+print(final_grade7)  # Output: 8.8
