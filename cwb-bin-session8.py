@@ -27,8 +27,6 @@ Unique scores in the list: [80, 75]
 Average of unique scores with modal score(90): 90 + (80 + 75) / 3 = 81.6667
 Square root of the average: √81.6666666667 ≈ 9.04
 '''
-#use inbuilt functions to simplify code
-
 from math import sqrt
 from collections import Counter
 
@@ -44,15 +42,8 @@ def curved_grading(scores):
    if len(scores) == 0:
        return None
 
-   #iterate through the scores and add each of them to score_count variable as
-   # key and the number of times it appears as the value
+   #get the count of each score as a key value pair
    score_count = Counter(scores)
-
-   for score in scores:
-        if score in score_count:
-            score_count[score] += 1
-        else:
-            score_count[score] = 1
 
    #get unique scores and save them in a new list variable
    for key, value in score_count.items():
