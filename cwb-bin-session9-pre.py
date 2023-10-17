@@ -69,3 +69,26 @@ def calculateFactorial(num):
 
 
 print(f"The factorial of 7 is {calculateFactorial(7)}")
+
+
+'''
+4. REVERSE A STRING
+
+Discover code that reverses the characters in a string.
+
+REF: https://www.geeksforgeeks.org/reverse-string-python-5-different-ways/
+'''
+def reverse(s):
+    if len(s) == 0:
+        return s
+    else:
+        return reverse(s[1:]) + s[0]
+
+
+s = "Geeksforgeeks"
+
+print("The original string is : ", end="")
+print(s)
+
+print("The reversed string(using recursion) is : ", end="")
+print(reverse(s))
