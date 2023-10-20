@@ -237,3 +237,78 @@ Please type Y for YES or N for NO.
 
 calculate()
 
+
+'''
+9. TODO LIST APP:
+Find code for a to-do list application that allows users to add, remove, and mark tasks as completed.
+
+REF: N/A
+'''
+class TodoList:
+    def __init__(self):
+        self.tasks = []
+
+    def add_task(self, task):
+        self.tasks.append({'task': task, 'completed': False})
+
+    def remove_task(self, task):
+        for t in self.tasks:
+            if t['task'] == task:
+                self.tasks.remove(t)
+                break
+
+    def mark_task_completed(self, task):
+        for t in self.tasks:
+            if t['task'] == task:
+                t['completed'] = True
+                break
+
+    def display_tasks(self):
+        if not self.tasks:
+            print("No tasks in the to-do list.")
+        else:
+            for index, task in enumerate(self.tasks, start=1):
+                status = "Done" if task['completed'] else "Not Done"
+                print(f"{index}. {task['task']} - Status: {status}")
+
+def main():
+    todo_list = TodoList()
+
+    while True:
+        print("\nTodo List Menu:")
+        print("1. Add Task")
+        print("2. Remove Task")
+        print("3. Mark Task as Completed")
+        print("4. Display Tasks")
+        print("5. Quit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            task = input("Enter the task: ")
+            todo_list.add_task(task)
+        elif choice == '2':
+            task = input("Enter the task to remove: ")
+            todo_list.remove_task(task)
+        elif choice == '3':
+            task = input("Enter the task to mark as completed: ")
+            todo_list.mark_task_completed(task)
+        elif choice == '4':
+            todo_list.display_tasks()
+        elif choice == '5':
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
+
+
+'''
+10. NUMBER GUESSING GAME
+
+Find code for a number guessing game where the program generates a random number, and the user tries to guess it.
+
+REF: https://djangocentral.com/creating-a-guessing-game-in-python/
+'''
