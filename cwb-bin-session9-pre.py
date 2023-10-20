@@ -92,3 +92,25 @@ print(s)
 
 print("The reversed string(using recursion) is : ", end="")
 print(reverse(s))
+
+
+'''
+5. PRIME NUMBER CHECKER
+
+Locate code that checks if a given number is prime.
+
+REF: https://www.sanfoundry.com/python-program-check-prime-number/
+'''
+#refactore using binary search logic
+#loop through the square root of n
+def isPrime(n):
+  k = 0
+  for i in range(2, n // 2):
+    if(n % i == 0):
+        k = k + 1
+  if(k <= 0):
+    return True
+  else:
+    return False
+
+isPrime(13)
