@@ -342,3 +342,43 @@ def number_guessing_game():
     else:
         print('Sorry, ' + player_name + ', you did not guess the number. The number was ' + str(number))
         
+
+'''
+11. PASSWORD GENERATOR
+
+Discover code for a password generator that generates strong and secure passwords.
+
+REF: https://geekflare.com/password-generator-python-code/
+'''
+import secrets
+import string
+
+# define the alphabet
+letters = string.ascii_letters
+digits = string.digits
+special_chars = string.punctuation
+
+alphabet = letters + digits + special_chars
+
+# fix password length
+pwd_length = 12
+
+# generate a password string
+pwd = ''
+for i in range(pwd_length):
+  pwd += ''.join(secrets.choice(alphabet))
+
+# print(pwd)
+
+# generate password meeting constraints
+while True:
+  pwd = ''
+  for i in range(pwd_length):
+    pwd += ''.join(secrets.choice(alphabet))
+
+  if (any(char in special_chars for char in pwd) and
+      sum(char in digits for char in pwd)>=2):
+          break
+# print(pwd)
+
+
