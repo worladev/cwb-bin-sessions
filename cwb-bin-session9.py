@@ -31,3 +31,28 @@ Day 9: 6 (Improved)
 Day 10: 7
 The longest consecutive sequence of improvement is 4 days, from day 6 to day 10.
 '''
+def find_improvement(training_times):
+
+  # check if there is only one or no training times available
+  if len(training_times) <= 1:
+    return None
+
+  #single line multi-variable declaration
+  maximum_length = length_of_sequence = 0
+
+  for indx in range(len(training_times)):
+    if training_times[indx] > training_times[indx - 1]:
+      length_of_sequence += 1
+    else:
+      length_of_sequence = 0
+
+    #getting the longest sequence of improvement in training times
+    maximum_length = max(length_of_sequence, maximum_length)
+
+  return maximum_length
+
+
+#CASE 1:
+training_times = [3, 4, 6, 5, 5, 2, 4, 5, 6, 7, 6]
+result = find_improvement(training_times)
+print(result)  # Output: 4
