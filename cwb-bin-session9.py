@@ -76,3 +76,8 @@ print(result4)  # Output: 0
 training_times5 = [4]
 result5 = find_improvement(training_times5)
 print(result5)  # Output: None
+
+#CASE 6:
+training_times6 = [3, 4, 5, 6, 7, 8, 9, 8, 9, 8, 7, 5, 5, 2, 4, 5, 6, 7, 6]
+result6 = find_improvement(training_times6)
+print(result6)  # Output: 6
