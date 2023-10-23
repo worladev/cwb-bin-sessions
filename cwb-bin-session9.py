@@ -56,3 +56,13 @@ def find_improvement(training_times):
 training_times = [3, 4, 6, 5, 5, 2, 4, 5, 6, 7, 6]
 result = find_improvement(training_times)
 print(result)  # Output: 4
+
+#CASE 2:
+training_times2 = [4, 4, 5, 4, 5, 4, 4, 5, 3, 5, 6]
+result2 = find_improvement(training_times2)
+print(result2)  # Output: 2
+
+#CASE 3:
+training_times3 = []
+result3 = find_improvement(training_times3)
+print(result3)  # Output: None
