@@ -66,3 +66,13 @@ print(result2)  # Output: 2
 training_times3 = []
 result3 = find_improvement(training_times3)
 print(result3)  # Output: None
+
+#CASE 4:
+training_times4 = [5, 5, 5, 5, 5]
+result4 = find_improvement(training_times4)
+print(result4)  # Output: 0
+
+#CASE 5:
+training_times5 = [4]
+result5 = find_improvement(training_times5)
+print(result5)  # Output: None
