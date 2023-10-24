@@ -154,3 +154,11 @@ transformation = "R"
 result = transform_text(input_text, keyword, transformation)
 print(result)
 #Output: "Data scientists use R for data analysis. R is powerful."
+
+#Example 4:
+input_text = "Data scientists use Python for data analysis. Python is powerful."
+keyword = ""
+transformation = "R"
+result = transform_text(input_text, keyword, transformation)
+print(result)
+#Output: None
