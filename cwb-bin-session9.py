@@ -81,3 +81,28 @@ print(result5)  # Output: None
 training_times6 = [3, 4, 5, 6, 7, 8, 9, 8, 9, 8, 7, 5, 5, 2, 4, 5, 6, 7, 6]
 result6 = find_improvement(training_times6)
 print(result6)  # Output: 6
+
+
+'''
+TASK 2
+TITLE: Text Transformation - Finding Keywords
+
+PROBLEM STATEMENT: You are developing a data transformation tool for processing text data. Your task is to identify
+and transform specific keywords within a text string. To accomplish this, you need to determine if a given keyword
+is a substring of the input text and apply the transformation to all occurrences of that keyword.
+
+Function Signature:
+def transform_text(input_text: str, keyword: str, transformation: str) -> str:
+    pass
+
+INPUT: input_text: A string containing the input text data (length ≤ 10^4 characters).
+keyword: A string representing the keyword to be found and transformed (length ≤ 100 characters).
+transformation: A string representing the transformation to be applied to occurrences of the keyword (length ≤ 100 characters).
+
+OUTPUT: A string representing the transformed text data after applying the specified transformation to all
+occurrences of the keyword.
+
+Notes:
+In each example, the transform_text function should find all occurrences of the specified keyword within the
+input_text and replace them with the transformation string.
+'''
