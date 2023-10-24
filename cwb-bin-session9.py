@@ -32,7 +32,7 @@ Day 10: 7
 The longest consecutive sequence of improvement is 4 days, from day 6 to day 10.
 '''
 def find_improvement(training_times):
-
+  
   # check if there is only one or no training times available
   if len(training_times) <= 1:
     return None
@@ -106,3 +106,35 @@ Notes:
 In each example, the transform_text function should find all occurrences of the specified keyword within the
 input_text and replace them with the transformation string.
 '''
+def transform_text(input_text: str, keyword: str, transformation: str) -> str:
+
+  #checking for empty list
+  if len(input_text) == 0 or len(keyword) == 0 or len(transformation) == 0:
+        return None
+
+  #checking the length of each string passed as parameter
+  if len(input_text) > 10000 or len(keyword) > 100 or len(transformation) > 100:
+    return None
+
+  #split the sentence into a list of words
+  split_input_text = input_text.split()
+
+  #loop through the indexes of the words
+  for index in range(len(split_input_text) - 1):
+    if split_input_text[index] == keyword: #compare word at each index to the keyword
+      split_input_text.remove(split_input_text[index]) #if word is the same as keyword, remove word
+      split_input_text.insert(index, transformation) #insert transformation word at the index of the removed word
+
+  #transform words back to a sentence
+  transformed_text = " ".join(split_input_text)
+
+  return transformed_text
+
+
+#Example 1:
+input_text = "The quick brown fox jumps over the lazy dog."
+keyword = "fox"
+transformation = "cat"
+result = transform_text(input_text, keyword, transformation)
+print(result)
+#Output: "The quick brown cat jumps over the lazy dog."
