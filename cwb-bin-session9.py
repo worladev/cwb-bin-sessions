@@ -146,3 +146,11 @@ transformation = "Java"
 result = transform_text(input_text, keyword, transformation)
 print(result)
 #Output: "Java is a popular programming language. Java is versatile and easy to learn."
+
+#Example 3:
+input_text = "Data scientists use Python for data analysis. Python is powerful."
+keyword = "Python"
+transformation = "R"
+result = transform_text(input_text, keyword, transformation)
+print(result)
+#Output: "Data scientists use R for data analysis. R is powerful."
