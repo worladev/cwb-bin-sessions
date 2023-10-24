@@ -138,3 +138,11 @@ transformation = "cat"
 result = transform_text(input_text, keyword, transformation)
 print(result)
 #Output: "The quick brown cat jumps over the lazy dog."
+
+#Example 2:
+input_text = "Python is a popular programming language. Python is versatile and easy to learn."
+keyword = "Python"
+transformation = "Java"
+result = transform_text(input_text, keyword, transformation)
+print(result)
+#Output: "Java is a popular programming language. Java is versatile and easy to learn."
