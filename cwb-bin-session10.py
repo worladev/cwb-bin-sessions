@@ -70,3 +70,11 @@ company2_employees = [103, 104, 107, 108]
 result = merge_employee_lists(company1_employees, company2_employees)
 print(result)
 #Output: [101, 102, 103, 104, 105, 107, 108, 110]
+
+# CASE 2
+company1_employees2 = [101, 102, 103, 105, 110]
+company2_employees2 = [103, 104, 107, 108]
+result2 = merge_employee_lists(company1_employees2, company2_employees2)
+print(result2)
+#Output: [101, 102, 103, 104, 105, 107, 108, 110]
+
