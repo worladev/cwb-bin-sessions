@@ -35,34 +35,40 @@ Notes:
 The merged list should not contain duplicate employee IDs.
 Your solution should not use any in-built sort function.
 '''
-def merge_employee_lists(company1_employees, company2_employees):
+def merge_employee_lists(listA, listB):
 
-    # check if both employee list is empty
-    if len(company1_employees) == 0 and len(company2_employees) == 0:
-        return None
+    # return the other list if a list is empty
+    if len(listA) < 1:
+        return listB
+    if len(listB) < 1:
+        return listA
 
-    merged_employees = list() # list variable to hold merged ID's
+    mergedList = list() # list variable to hold merged ID's
+    
+    pointerA, pointerB = 0, 0 # pointer variables to listA and listB
 
-    i = 0 # pointer variable to list A
-    j = 0 # pointer variable to list B
-
-    while i < len(company1_employees) and j < len(company2_employees):
-        if company1_employees[i] < company2_employees[j]: # check if first list ID is less than second list ID
-            merged_employees.append(company1_employees[i]) # if true, append first list ID
-            i += 1  # increment list A pointer by 1
-        elif company1_employees[i] == company2_employees[j]: # check if the two lists ID are the same
-            merged_employees.append(company1_employees[i])
-            i += 1 # increment list A pointer by 1
-            # j += 1 # increment list B pointer by 1
+    while pointerA < len(listA) and pointerB < len(listB):
+        fromA = listA[pointerA]
+        fromB = listB[pointerB]
+        
+        if fromA < fromB: # check if first list ID is less than second list ID
+            mergedList.append(fromA) # if true, append first list ID
+            pointerA += 1  # increment list A pointer by 1
+        elif fromA > fromB: # check if the two lists ID are the same
+            mergedList.append(fromB)
+            pointerB += 1 # increment list B pointer by 1
         else:
-            merged_employees.append(company2_employees[j])
-            j += 1
+            mergedList.append(fromB)
+            pointerA += 1 # increment list A pointer by 1
+            pointerB += 1 # increment list B pointer by 1
 
     # add the rest of the items in the longer list to the merged list
-    merged_employees.extend(company1_employees[i:])
-    merged_employees.extend(company2_employees[j:])
+    if pointerA < len(listA):
+        mergedList.extend(listA[pointerA:])
+    if pointerB < len(listB):
+        mergedList.extend(listB[pointerB:])
 
-    return merged_employees
+    return mergedList
 
 # CASE 1
 company1_employees = [101, 102, 105, 110]
@@ -83,7 +89,7 @@ company1_employees3 = []
 company2_employees3 = []
 result3 = merge_employee_lists(company1_employees3, company2_employees3)
 print(result3)
-#Output: [101, 102, 103, 104, 105, 107, 108, 110]
+#Output: []
 
 # CASE 4
 company1_employees4 = [101, 102, 105, 110]
@@ -97,4 +103,4 @@ company1_employees5 = [101, 102, 105, 110]
 company2_employees5 = [101, 104, 107, 108]
 result5 = merge_employee_lists(company1_employees5, company2_employees5)
 print(result5)
-#Output: [101, 102, 103, 104, 105, 107, 108, 110]
+#Output: [101, 102, 104, 105, 107, 108, 110]
