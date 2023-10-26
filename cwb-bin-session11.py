@@ -27,3 +27,30 @@ Explanation:
 In this version of the problem, there is a tie between "Candidate A" and "Candidate B" since both received the highest number of votes (10 each).
 Therefore, the function should return a list of the tied candidates' names.
 '''
+def find_winner(candidates, votes):
+
+  #return none if parameter is empty
+  if len(candidates) == 0 or len(votes) == 0:
+    return None
+
+  #variables
+  total_votes = dict() #hold candidates and the total votes accrued
+  highest_vote = list() #hold candidate(s) with the highest votes
+  pointer = 0 #pointer variable to candidate list
+
+  #loop to get candidate and their total votes
+  for candidate in candidates:
+    total_votes[candidate] = total_votes.get(candidate, 0) + votes[pointer]
+    pointer += 1
+
+  #list comprehension to get the candidate(s) with the highest votes
+  highest_vote = [key for key, value in total_votes.items() if value == max(total_votes.values())]
+
+  return highest_vote #return the candidate(s) with the highest votes
+
+
+# CASE 1
+candidates = ["Candidate A", "Candidate B", "Candidate A", "Candidate C", "Candidate B", "Candidate A"]
+votes = [3, 2, 3, 2, 8, 4]
+winner = find_winner(candidates, votes)
+print(winner)  # Output: ['Candidate A', 'Candidate B']
