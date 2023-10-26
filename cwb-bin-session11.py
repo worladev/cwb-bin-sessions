@@ -54,3 +54,15 @@ candidates = ["Candidate A", "Candidate B", "Candidate A", "Candidate C", "Candi
 votes = [3, 2, 3, 2, 8, 4]
 winner = find_winner(candidates, votes)
 print(winner)  # Output: ['Candidate A', 'Candidate B']
+
+# CASE 2
+candidates2 = ["Candidate A", "Candidate B", "Candidate A", "Candidate C", "Candidate B", "Candidate A"]
+votes2 = [4, 1, 5, 6, 7, 3]
+winner2 = find_winner(candidates2, votes2)
+print(winner2)  # Output: ['Candidate A']
+
+# CASE 3
+candidates3 = ["Candidate A", "Candidate B", "Candidate A", "Candidate C", "Candidate B"]
+votes3 = []
+winner3 = find_winner(candidates3, votes3)
+print(winner3)  # Output: None
