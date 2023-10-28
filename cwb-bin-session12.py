@@ -89,3 +89,18 @@ L = []
 count = count_strings_formed(S, L)
 print(count)
 # Output: 0
+
+# CASE 4:
+S = "programming"
+L = ["program", "gram", "pingpong", "pong"]
+count = count_strings_formed(S, L)
+print(count)
+# Output: 3
+
+# CASE 5:
+S = "confidence"
+L = ["con", "defy", "done", "need", "needy", "confide", "end", "condone"]
+count = count_strings_formed(S, L)
+print(count)
+# Output: 5
+
