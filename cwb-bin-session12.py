@@ -33,4 +33,46 @@ L = ["program", "gram", "ping", "pong"]
 count = count_strings_formed(S, L)
 # Output: 4
 # Explanation: All strings in L can be formed using the characters of "programming."
+
+NOTE: needs refactoring.
+counter = 0
+for x in string k:
+    if((x is both k and S) AND (count(x) in k <= count(x) in S)):
+       counter += 1
+
+string S = canopy
+string k = "cane"
 '''
+from collections import Counter
+
+def count_strings_formed(S, L):
+
+    count = 0 # keep track of words that can be formed
+
+    # check for empty string or list
+    if S == "" or len(L) == 0:
+        return count
+
+    # count characters and their frequency in string
+    s_word = Counter(S)
+    indx = 0 #pointer variable
+
+    #
+    while indx < len(L):
+        l_word = Counter(L[indx]) #get each word in list and count characters and their frequency
+        if len(l_word - s_word) > 0: #if subtraction operation is greater than 0, ignore
+            indx += 1 #increment pointer by 1
+        else:
+            count += 1
+            indx += 1 #increment pointer by 1
+
+    return count
+
+
+# CASE 1:
+S = "canopy"
+L = ["copy", "nano", "can", "pan", "coy", "cane"]
+count = count_strings_formed(S, L)
+print(count)
+# Output: 4
+
