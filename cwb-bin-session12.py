@@ -104,3 +104,9 @@ count = count_strings_formed(S, L)
 print(count)
 # Output: 5
 
+# CASE 6:
+S = "emmancipation"
+L = ["man", "nation", "notion", "pace", "portion", "name", "animate"]
+count = count_strings_formed(S, L)
+print(count)
+# Output: 5
