@@ -54,3 +54,21 @@ def transform_temperature_data(matrix):
         transformed_matrix.append(new_row)
     
     return transformed_matrix # return transformed matrix
+
+
+# CASE 1:
+temperature_data = [
+  [72.5, 73.0, 72.8],
+  [71.2, 71.8, 71.0],
+  [70.5, 70.2, 70.9]
+]
+transformed_data = transform_temperature_data(temperature_data)
+# print(transformed_data)
+for row in transformed_data:
+  print(row)
+# Output:
+#  [
+  #  [72.5, 71.2, 70.5],
+  #  [73.0, 71.8, 70.2],
+  #  [72.8, 71.0, 70.9]
+#  ]
