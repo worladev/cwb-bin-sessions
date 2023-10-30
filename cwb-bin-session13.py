@@ -108,3 +108,23 @@ for row3 in transformed_data3:
   # [77.2, 80.0]
 # ]
 
+# CASE 4:
+print("\n")
+temperature_data4 = [
+  [71.2, 71.8, 88.5, 70.2],
+  [89.5, 73.2, 74.9, 69.1],
+  [72.5, 75.0, 72.8, 78.0],
+  [81.5, 76.0, 72.6, 77.5]
+]
+transformed_data4 = transform_temperature_data(temperature_data4)
+# print(transformed_data5)
+for row4 in transformed_data4:
+  print(row4)
+# Output:
+#  [
+  #  [71.2, 89.5, 72.5, 81.5],
+  #  [71.8, 73.2, 75.0, 76.0],
+  #  [88.5, 74.9, 72.8, 72.6],
+  #  [70.2, 69.1, 78.0, 77.5]
+#  ]
+
