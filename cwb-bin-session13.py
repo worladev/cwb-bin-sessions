@@ -39,3 +39,18 @@ transformed_data = transform_temperature_data(temperature_data)
 #   [72.8, 71.0, 70.9]
 # ]
 '''
+def transform_temperature_data(matrix):
+    
+    if matrix is None: # return none if matrix value is none
+        return None
+    
+    transformed_matrix = list() # list variable for transformed matrix
+    
+    # loop to perform transformation
+    for row in range(len(matrix)):
+        new_row = list()
+        for col in range(len(matrix[row])):
+            new_row.append(matrix[col][row])
+        transformed_matrix.append(new_row)
+    
+    return transformed_matrix # return transformed matrix
