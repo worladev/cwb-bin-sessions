@@ -45,3 +45,19 @@ def acknowledgment_checker(sent_packets, received_acknowledgments):
 
     return failed_acknowledgments
 
+
+# CASE 1:
+sent_packets = [1, 2, 3, 4, 5]
+received_acknowledgments = [2, 4]
+
+missing_packets = acknowledgment_checker(sent_packets, received_acknowledgments)
+print(missing_packets)
+# Output: [1, 3, 5]
+
+# CASE 2:
+sent_packets = []
+received_acknowledgments = [2, 4]
+
+missing_packets = acknowledgment_checker(sent_packets, received_acknowledgments)
+print(missing_packets)
+# Output: []
