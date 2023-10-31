@@ -1,5 +1,5 @@
 '''
-SESSION 14 (/09/2023)
+SESSION 14 (25/09/2023)
 Mentor and Facilitator ==> ANDY AFFUL
 
 PROBLEM STATEMENT: You are tasked with simulating the data acknowledgment process the the Transport Layer which
@@ -73,6 +73,14 @@ print(missing_packets)
 # CASE 4:
 sent_packets = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 received_acknowledgments = []
+
+missing_packets = acknowledgment_checker(sent_packets, received_acknowledgments)
+print(missing_packets)
+# Output: []
+
+# CASE 5:
+sent_packets = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+received_acknowledgments = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 missing_packets = acknowledgment_checker(sent_packets, received_acknowledgments)
 print(missing_packets)
