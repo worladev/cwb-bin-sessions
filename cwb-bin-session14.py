@@ -31,3 +31,17 @@ It takes two lists as input: sent_packets representing unique packet IDs sent an
 representing unique acknowledgment packet IDs received. The function calculates and returns the IDs of packets
 that have not been successfully acknowledged.
 '''
+def acknowledgment_checker(sent_packets, received_acknowledgments):
+    
+    #variable to hold IDs that were not acknowledged
+    failed_acknowledgments = list()
+
+    #check for empty input list
+    if len(sent_packets) == 0 or len(received_acknowledgments) == 0:
+        return failed_acknowledgments
+
+    #comprehension to get IDs that were not acknowledged
+    failed_acknowledgments = [id for id in sent_packets if id not in received_acknowledgments]
+
+    return failed_acknowledgments
+
