@@ -61,3 +61,19 @@ received_acknowledgments = [2, 4]
 missing_packets = acknowledgment_checker(sent_packets, received_acknowledgments)
 print(missing_packets)
 # Output: []
+
+# CASE 3:
+sent_packets = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+received_acknowledgments = [1, 2, 4, 5, 9]
+
+missing_packets = acknowledgment_checker(sent_packets, received_acknowledgments)
+print(missing_packets)
+# Output: [3, 6, 7, 8]
+
+# CASE 4:
+sent_packets = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+received_acknowledgments = []
+
+missing_packets = acknowledgment_checker(sent_packets, received_acknowledgments)
+print(missing_packets)
+# Output: []
