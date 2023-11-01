@@ -37,8 +37,14 @@ def is_pangram(sentence):
   return all(arr)
 
 
-# Example:
+# Example Case 1:
 sentence1 = "The quick brown fox jumps over the lazy dog"
 result1 = is_pangram(sentence1)
 print(result1)
 # Output: True
+
+# Example Case 2:
+sentence2 = "Hello, World!"
+result2 = is_pangram(sentence2)
+print(result2)
+# Output: False
