@@ -1,5 +1,5 @@
 '''
-SESSION 15 (/09/2023)
+IN SESSION 15 CODING CHALLENGE (29/09/2023)
 Mentor and Facilitator ==> ANDY AFFUL
 
 TITLE: "Pangram Checker"
@@ -47,4 +47,10 @@ print(result1)
 sentence2 = "Hello, World!"
 result2 = is_pangram(sentence2)
 print(result2)
+# Output: False
+
+# Example Case 3:
+sentence3 = "abcdefghijklmnopqrsuvwxyz"
+result3 = is_pangram(sentence3)
+print(result3)
 # Output: False
