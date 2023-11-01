@@ -35,3 +35,10 @@ def is_pangram(sentence):
 
   # Check if all letters (values) in the list are 1, indicating a pangram.
   return all(arr)
+
+
+# Example:
+sentence1 = "The quick brown fox jumps over the lazy dog"
+result1 = is_pangram(sentence1)
+print(result1)
+# Output: True
