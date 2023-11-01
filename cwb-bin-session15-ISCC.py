@@ -20,3 +20,18 @@ result2 = is_pangram(sentence2)
 print(result2)
 # Output: False
 '''
+def is_pangram(sentence):
+  # Create a list to track the presence of each letter (a to z).
+  arr = [0] * 26
+
+  for char in sentence:
+    char = char.lower()
+    if 'a' <= char and char <= 'z':
+      # Calculate the index in the list for the character.
+      index = ord(char) - ord('a')
+
+      # Mark the presence of the character by setting its value to 1.
+      arr[index] = 1
+
+  # Check if all letters (values) in the list are 1, indicating a pangram.
+  return all(arr)
