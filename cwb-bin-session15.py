@@ -49,3 +49,18 @@ def group_anagram(word_list):
     anagrams = [value for value in all_anagrams.values()]
 
     return anagrams
+
+
+# CASE 1:
+word_list = ["listen", "enlist", "silent", "hello", "world"]
+result = group_anagram(word_list)
+# print(result)
+for anagram in result:
+  print(anagram)
+# Output:
+# [
+#     ["listen", "enlist", "silent"],
+#     ["hello"],
+#     ["world"]
+# ]
+
