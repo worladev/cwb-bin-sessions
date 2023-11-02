@@ -32,6 +32,7 @@ Output:
     ["hello"],
     ["world"]
 ]
+Any
 '''
 def group_anagram(word_list):
     anagrams = list() #a list variable to hold grouped anagram words
