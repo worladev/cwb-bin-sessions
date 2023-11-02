@@ -33,3 +33,19 @@ Output:
     ["world"]
 ]
 '''
+def group_anagram(word_list):
+    anagrams = list() #a list variable to hold grouped anagram words
+    all_anagrams = dict() #a dictionary variable to hold sorted word as key and the unsorted word as value
+
+    for word in word_list:
+        #sort the word in alphabetical order
+        word_sorted = ''.join(sorted(word))
+        if  word_sorted not in all_anagrams:
+            all_anagrams[word_sorted] = [word] #sorted word as key and word as value in a list
+        else:
+            all_anagrams[word_sorted] += [word] #add word to value list
+
+    #comprehension to append all dictionary values
+    anagrams = [value for value in all_anagrams.values()]
+
+    return anagrams
