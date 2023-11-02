@@ -64,3 +64,17 @@ for anagram in result:
 #     ["world"]
 # ]
 
+print("\n")
+# CASE 2:
+word_list2 = ["enlist", "cider", "silent", "hello", "cried", "listen", "world"]
+result2 = group_anagram(word_list2)
+# print(result2)
+for anagram2 in result2:
+  print(anagram2)
+# Output:
+# [
+#     ["enlist", "silent", listen"],
+#     ["cider", "cried"]
+#     ["hello"],
+#     ["world"]
+# ]
