@@ -88,3 +88,19 @@ cost_per_km = 2.5  # $2.5 per kilometer
 total_cost = calculate_fuel_cost(start, points, cost_per_km)
 print(total_cost)
 # Output: 14.14
+
+# CASE 2:
+start2 = (2, 4)
+points2 = [(2,0),(-1,2),(-3,3),(2,7),(4,-4)]
+cost_per_km2 = 3.3  # $3.3 per kilometer
+total_cost2 = calculate_fuel_cost(start2, points2, cost_per_km2)
+print(total_cost2)
+#total_cost = $90.5
+
+# CASE 3:
+start3 = ()
+points3 = [(2,0),(-1,2),(-3,3),(2,7),(4,-4)]
+cost_per_km3 = 3.3  # $3.3 per kilometer
+total_cost3 = calculate_fuel_cost(start3, points3, cost_per_km3)
+print(total_cost3)
+#total_cost = $0.0
