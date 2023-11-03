@@ -51,3 +51,33 @@ cost_per_km = 3.3  # $3.3 per kilometer
 total_cost = calculate_fuel_cost(start, points, cost_per_km)
 #total_cost = $90.5
 '''
+from math import sqrt
+
+def calculate_fuel_cost(start, points, cost_per_km):
+
+    total_distance = 0 #variable to hold total distance covered
+    total_cost = 0.0
+
+    #check for empty start and subsequent points
+    if len(start) == 0 or len(points) == 0 or cost_per_km == 0:
+      return total_cost
+
+    st = start #the start cordinates
+    i = 0 #keep track of cordinates in points
+
+    while i < len(points):
+        x_val = (points[i][0] - st[0])**2
+        y_val = (points[i][1] - st[1])**2
+        distance = round(sqrt(x_val + y_val), 2) #compute distance between the two points
+        total_distance += distance #compute total distance
+
+        st = points[i] #set starting point to the last points in previous distance
+        i += 1 #increment tracker by 1
+
+    #calculate total cost and round to 2 decimal places
+    total_cost = round((total_distance * cost_per_km), 2)
+
+    #return the total cost
+    return total_cost
+
+
