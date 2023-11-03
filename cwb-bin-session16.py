@@ -81,3 +81,10 @@ def calculate_fuel_cost(start, points, cost_per_km):
     return total_cost
 
 
+# CASE 1
+start = (0, 0)
+points = [(1, 1), (2, 2), (3, 3), (4, 4)]
+cost_per_km = 2.5  # $2.5 per kilometer
+total_cost = calculate_fuel_cost(start, points, cost_per_km)
+print(total_cost)
+# Output: 14.14
