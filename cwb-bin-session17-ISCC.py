@@ -46,3 +46,7 @@ print(excel_column_to_number('A'))  # Output: 1
 print(excel_column_to_number('AC'))  # Output: 30
 print(excel_column_to_number('ZZ'))  # Output: 702
 print(excel_column_to_number('C'))  # Output: 3
+print(excel_column_to_number('AA'))  # Output: 27
+print(excel_column_to_number('AB'))  # Output: 28
+print(excel_column_to_number('Z'))  # Output: 26
+
