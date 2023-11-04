@@ -23,3 +23,23 @@ print(excel_column_to_number('A'))  # Output: 1
 print(excel_column_to_number('AC'))  # Output: 30
 print(excel_column_to_number('ZZ'))  # Output: 702
 '''
+def excel_column_to_number(column_title):
+
+    number = 0 #variable to hold column title number value
+
+    i = 0 #index tracker
+
+    #loop to get each alphabet in column title
+    while i < len(column_title):
+        number *= 26 #default base 26
+
+        #subtract the ascii value of letter "A" from the value of letter at index i
+          # add 1 and add it to value of number variable.
+        number += ord(column_title[i]) - ord('A') + 1
+        i += 1 #increment tracker by 1
+
+    return number
+
+
+# Example Cases:
+print(excel_column_to_number('A'))  # Output: 1
