@@ -43,3 +43,6 @@ def excel_column_to_number(column_title):
 
 # Example Cases:
 print(excel_column_to_number('A'))  # Output: 1
+print(excel_column_to_number('AC'))  # Output: 30
+print(excel_column_to_number('ZZ'))  # Output: 702
+print(excel_column_to_number('C'))  # Output: 3
