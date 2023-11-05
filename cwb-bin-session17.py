@@ -32,3 +32,23 @@ Note:
 You need to identify servers that have returned all three classifications: HIGH, MEDIUM, and LOW, and count them as faulty.
 The input string will always be of valid format and length kn, where k is an integer and n the number of servers.
 '''
+# SOLUTION 1
+
+def count_faulty_servers(classifications):
+
+    segregate = dict() #dictionary to hold performance of each server
+    count_faulty_servers = 0 #tracker to keep count of faulty servers
+
+    #loop to assign performance value to each server
+    for item in range(1, len(classifications), 2):
+        if classifications[item] not in segregate:
+            segregate[classifications[item]] = [classifications[item-1]]
+        else:
+            segregate[classifications[item]] += [classifications[item-1]]
+
+    #loop to check for faulty servers
+    for value in segregate.values():
+        if "H" in value and "M" in value and "L" in value:
+            count_faulty_servers += 1 #increment faulty server value by 1
+
+    return count_faulty_servers #return number of faulty servers
