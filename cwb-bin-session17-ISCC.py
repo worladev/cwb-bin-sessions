@@ -1,5 +1,5 @@
 '''
-SESSION 17 (04/10/2023)
+IN SESSION 17 CODING CHALLENGE (04/10/2023)
 Mentor and Facilitator ==> ANDY AFFUL
 
 TITLE: Excel Column Title to Number Conversion
