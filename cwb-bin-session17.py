@@ -52,3 +52,16 @@ def count_faulty_servers(classifications):
             count_faulty_servers += 1 #increment faulty server value by 1
 
     return count_faulty_servers #return number of faulty servers
+
+
+# Example 1:
+rings = "L1H1H2M4L4L1L1M3H1H1M1H1"
+result = count_faulty_servers(rings)
+print(result)
+# Output: 1
+
+# Example 2:
+rings2 = "M2M4L0M1L0L0L4L1L0M3L0M2L3H4L0M3H4H4"
+result2 = count_faulty_servers(rings2)
+print(result2)
+# Output: 1
