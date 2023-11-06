@@ -138,3 +138,10 @@ rings5 = "L0L2H4L4L3H1H1M0M2M4H3L2L3M1H2M1"
 result5 = count_faulty_servers(rings5)
 print(result5)
 # Output: 2
+
+# Example 6:
+rings6 = "H0M0H1H2M2M2L1L0M2M0H0M1M3H2L0L3H3M4"
+result6 = count_faulty_servers(rings6)
+print(result6)
+# Output: 3
+
