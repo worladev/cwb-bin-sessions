@@ -77,3 +77,32 @@ rings4 = "L0M1H2L0M4H1M4L2H3H2M0H4L0H4H2M1M1H0M2L4"
 result4 = count_faulty_servers(rings4)
 print(result4)
 # Output: 3
+
+
+
+############# SOLUTION 2 #################
+# Code by Andy
+def count_faulty_servers(testResults):
+    count = 0
+    HIGH, MEDIUM, LOW = 0, 1, 2
+    mask = 0b111
+    length = len(testResults)
+    masks = [0] * (length // 2)
+
+    for i in range(0, length - 1, 2):
+        color = testResults[i]
+        server = int(testResults[i + 1])
+
+        if color == 'H':
+            masks[server] |= (1 << HIGH)
+        elif color == 'M':
+            masks[server] |= (1 << MEDIUM)
+        elif color == 'L':
+            masks[server] |= (1 << LOW)
+
+    for maskVal in masks:
+      #an exclusive or between maskVal and mask
+        if maskVal ^ mask == 0:
+            count += 1
+
+    return count
