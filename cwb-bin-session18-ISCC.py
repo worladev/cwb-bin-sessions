@@ -31,3 +31,9 @@ class GradeTracker:
 
 # Example Usage:
 tracker = GradeTracker()
+tracker.add_grade("Alice", 85)
+tracker.add_grade("Bob", 92)
+tracker.add_grade("Alice", 78)
+tracker.add_grade("Bob", 95)
+
+print(tracker.grade_records)
