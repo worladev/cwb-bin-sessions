@@ -38,3 +38,49 @@ sudoku.set_value(1, 2, 3)
 
 print("Is the Sudoku valid?", sudoku.is_valid())  # Output: False
 '''
+class MiniSudoku:
+    # an init method to initialize a 3x3 grid of nested list and
+      # and set initial element value to 0
+    def __init__(self, n):
+        self.grid = [[0]*n]*n
+        self.maxRow = n
+        self.maxColumn = n
+
+    # a set_value method to set values at a given row and column in the 3x3 grid
+    def set_value(self, row, col, value):
+        if row <= self.maxRow and col <= self.maxColumn:
+            self.grid[row-1][col-1] = value
+
+
+    def is_valid(self):
+        n = len(self.grid)
+        row_check = [False] * n
+        col_check = [False] * n
+
+        # Check each row and column
+        for i in range(n):
+            row_check = [False] * n
+            col_check = [False] * n
+
+            for j in range(n):
+
+                # Check rows
+                row_value = self.grid[i][j]
+
+                #if the value is outside 1-n or we've seen it before, return false
+                if row_value < 1 or row_value > n or row_check[row_value - 1]:
+                    return False
+
+                #mark the value as seen
+                row_check[row_value - 1] = True
+
+                # Check columns
+                col_value = self.grid[j][i]
+
+                if col_value < 1 or col_value > n or col_check[col_value - 1]:
+                    return False
+
+            col_check[col_value - 1] = True
+
+        return True
+    
