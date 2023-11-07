@@ -15,3 +15,19 @@ following functionalities:
 - Getting Grades: Implement a method grades(name) that takes a student's name and returns a list of their grades
 in ascending order.
 '''
+class GradeTracker:
+    def __init__(self):
+        self.grade_records = {}
+
+    def add_grade(self, name, grade):
+        if name in self.grade_records:
+            self.grade_records[name].append(grade)
+        else:
+            self.grade_records[name] = [grade]
+
+    def grades(self, name):
+        return sorted(self.grade_records.get(name, []))
+
+
+# Example Usage:
+tracker = GradeTracker()
