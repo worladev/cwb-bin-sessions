@@ -84,3 +84,10 @@ class MiniSudoku:
 
         return True
     
+
+# Example1 Usage:
+sudoku1 = MiniSudoku(3)
+sudoku1.set_value(3, 2, 1)
+sudoku1.set_value(2, 1, 3)
+sudoku1.set_value(1, 3, 2)
+print("Is the Sudoku valid?", sudoku1.is_valid())  # Output: True
