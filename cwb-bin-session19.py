@@ -32,3 +32,25 @@ if store.make_purchase(cart):
 else:
     print("Invalid Purchase!")
 '''
+class GroceryStore:
+    def __init__(self):
+        self.product = dict() #variable to hold items in the store
+        self.cart = dict() #variable to hold selected item to purchase
+
+    # method to add new products to store
+    def add_product(self, name, price, quantity):
+        self.product[name] = {'price': price, 'quantity':quantity}
+
+
+
+# Example Usage:
+store = GroceryStore()
+
+#add product to the store
+store.add_product("Apple", 1.0, 50)
+store.add_product("Banana", 0.5, 100)
+store.add_product("Milk", 1.99, 80)
+store.add_product("Oat", 1.4, 100)
+store.add_product("Orange", 0.7, 150)
+store.add_product("Grape", 0.99, 100)
+
