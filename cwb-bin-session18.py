@@ -91,3 +91,17 @@ sudoku1.set_value(3, 2, 1)
 sudoku1.set_value(2, 1, 3)
 sudoku1.set_value(1, 3, 2)
 print("Is the Sudoku valid?", sudoku1.is_valid())  # Output: True
+
+# Example2 Usage:
+sudoku2 = MiniSudoku(3)
+sudoku2.set_value(1, 3, 2)
+sudoku2.set_value(2, 1, 3)
+sudoku2.set_value(3, 2, 1)
+print("Is the Sudoku valid?", sudoku2.is_valid())  # Output: True
+
+# Example3 Usage:
+sudoku3 = MiniSudoku(3)
+sudoku3.set_value(3, 1, 2)
+sudoku3.set_value(2, 1, 3)
+sudoku3.set_value(1, 2, 3)
+print("Is the Sudoku valid?", sudoku3.is_valid())  # Output: False
