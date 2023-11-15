@@ -56,8 +56,31 @@ class GroceryStore:
         for key in dict_keys: #refactor
           if key in dict_keys:
               del self.product[name]
-              
+    
+    
+    # method to display all products in the store
+    def display_products(self):
+        for key, value in self.product.items():
+            print(f"{key}-> price: {value['price']} quantity: {value['quantity']}")
 
+    # method to help make purchase by adding selected product to
+      # cart and updating the quantity of products in the store
+    def make_purchase(self, name, quantity):
+        #check if product is available in store
+        if name in self.product.keys():
+            #check if product quantity is enough to make purchase
+            if self.product[name]['quantity'] >= quantity:
+                #add item to cart
+                self.cart[name] =  quantity
+            else:
+                print(f"Sorry! we only have {self.product[name]['quantity']} {name} left")
+
+            #subtract purchased items from product
+            self.product[name]['quantity'] -= quantity
+        else:
+            print(f"Sorry! {name} is out of stock")
+    
+              
 
 
 # Example Usage:
@@ -91,3 +114,7 @@ store.remove_product("Banana")
 #display all products in the store
 print("\nInventory after removing Milk and Banana from store")
 store.display_products()
+
+#make purchase from the store
+store.make_purchase("Apple", 5)
+store.make_purchase("Grape", 20)
