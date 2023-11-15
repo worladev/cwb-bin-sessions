@@ -48,6 +48,15 @@ class GroceryStore:
             self.product[name]['quantity'] = quantity
         else:
             print(f"\n{name} not in store. Add product first.")
+    
+    
+    # method to remove products from store
+    def remove_product(self, name):
+        dict_keys = list(self.product.keys()) # make a copy of product keys to help modify dictionary items
+        for key in dict_keys: #refactor
+          if key in dict_keys:
+              del self.product[name]
+              
 
 
 
@@ -75,3 +84,10 @@ store.update_product("Walnut", 0.4, 55)
 print("\nInventory after updating Apple, Oat and Walnut")
 store.display_products()
 
+#remove product from the store
+store.remove_product("Milk")
+store.remove_product("Banana")
+
+#display all products in the store
+print("\nInventory after removing Milk and Banana from store")
+store.display_products()
