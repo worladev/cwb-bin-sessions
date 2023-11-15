@@ -133,3 +133,10 @@ store.display_products()
 store.make_purchase("Apple", 5)
 store.make_purchase("Grape", 20)
 
+#display cart and products left after making purchase
+print("\nPurchasing 5 Apples, 20 Grapes")
+print(f"\nCart items: {store.cart}") #display selected items to purchase in cart
+store.display_products()
+
+#calculate total price for items purchased
+print(store.calculate_total_price())
