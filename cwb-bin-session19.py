@@ -40,6 +40,14 @@ class GroceryStore:
     # method to add new products to store
     def add_product(self, name, price, quantity):
         self.product[name] = {'price': price, 'quantity':quantity}
+    
+    # method to update products in the store
+    def update_product(self, name, price, quantity):
+        if name in self.product.keys(): # check if products exist in store
+            self.product[name]['price'] = price
+            self.product[name]['quantity'] = quantity
+        else:
+            print(f"\n{name} not in store. Add product first.")
 
 
 
@@ -53,4 +61,17 @@ store.add_product("Milk", 1.99, 80)
 store.add_product("Oat", 1.4, 100)
 store.add_product("Orange", 0.7, 150)
 store.add_product("Grape", 0.99, 100)
+
+#display all products in the store
+print("Inventory after adding products")
+store.display_products()
+
+#update product in the store
+store.update_product("Apple", 1.19, 200)
+store.update_product("Oat", 1.5, 75)
+store.update_product("Walnut", 0.4, 55)
+
+#display all products in the store
+print("\nInventory after updating Apple, Oat and Walnut")
+store.display_products()
 
