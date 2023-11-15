@@ -80,6 +80,20 @@ class GroceryStore:
         else:
             print(f"Sorry! {name} is out of stock")
     
+    
+    # method to calculate the total price of products selected by multiplying
+      # the selected quantity by the unit price
+    def calculate_total_price(self):
+        total_price = 0
+        for key, value in self.cart.items():
+            amount = value *  self.product[key]["price"]
+            total_price += amount
+
+        output = f"\nTotal Price: {round(total_price, 2)}"
+
+        return output
+
+    
               
 
 
@@ -118,3 +132,4 @@ store.display_products()
 #make purchase from the store
 store.make_purchase("Apple", 5)
 store.make_purchase("Grape", 20)
+
