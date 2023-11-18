@@ -29,3 +29,14 @@ The input Roman numeral string s is guaranteed to be a valid Roman numeral where
 Roman numerals are represented by seven different symbols: I, V, X, L, C, D, and M.
 '''
 
+from enum import IntEnum
+
+# Enum class to hold all seven unique roman values
+class RomanNumerals(IntEnum):
+    I = 1
+    V = 5
+    X = 10
+    L = 50
+    C = 100
+    D = 500
+    M = 1000
