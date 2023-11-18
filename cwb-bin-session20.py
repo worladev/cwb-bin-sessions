@@ -69,4 +69,7 @@ roman_converter = RomanConverter()
 
 #Example Cases
 print(roman_converter.roman_to_int("III"))  # Output: 3
+print(roman_converter.roman_to_int("IX"))   # Output: 9
+print(roman_converter.roman_to_int("LVIII"))# Output: 58
+
 
