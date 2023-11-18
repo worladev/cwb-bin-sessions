@@ -40,3 +40,28 @@ class RomanNumerals(IntEnum):
     C = 100
     D = 500
     M = 1000
+
+# RomanConverter class
+class RomanConverter:
+    def __init__(self):
+        self.enum_val = RomanNumerals
+
+    def roman_to_int(self, roman):
+        length_of_numeral = len(roman) #length of the user input roman numerals
+        index = 0 #tracker variable
+        int_value = 0 #variable to hold integer value of roman numeral
+
+        while index < length_of_numeral:
+            #using connectives to compare and compute values of current and previous index
+            if index > 0 and self.enum_val[roman[index]] > self.enum_val[roman[index-1]]:
+                value = self.enum_val[roman[index]] - self.enum_val[roman[index-1]]
+                int_value += (value - self.enum_val[roman[index-1]])
+            else:
+                int_value += self.enum_val[roman[index]]
+
+            index += 1 #increment index value by 1
+
+        return int_value
+
+
+
