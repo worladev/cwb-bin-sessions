@@ -64,4 +64,9 @@ class RomanConverter:
         return int_value
 
 
+#creating instance of the RomanConverter class
+roman_converter = RomanConverter()
+
+#Example Cases
+print(roman_converter.roman_to_int("III"))  # Output: 3
 
