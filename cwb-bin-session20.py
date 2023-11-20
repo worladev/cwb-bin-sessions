@@ -73,3 +73,4 @@ print(roman_converter.roman_to_int("IX"))   # Output: 9
 print(roman_converter.roman_to_int("LVIII"))# Output: 58
 print(roman_converter.roman_to_int("MCMXCIV"))# Output: 1994
 print(roman_converter.roman_to_int("IV"))# Output: 4
+print(roman_converter.roman_to_int("MCIV")) # Output: 1104
