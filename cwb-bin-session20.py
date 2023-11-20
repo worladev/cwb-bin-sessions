@@ -71,5 +71,5 @@ roman_converter = RomanConverter()
 print(roman_converter.roman_to_int("III"))  # Output: 3
 print(roman_converter.roman_to_int("IX"))   # Output: 9
 print(roman_converter.roman_to_int("LVIII"))# Output: 58
-
-
+print(roman_converter.roman_to_int("MCMXCIV"))# Output: 1994
+print(roman_converter.roman_to_int("IV"))# Output: 4
