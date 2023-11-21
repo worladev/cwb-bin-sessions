@@ -28,11 +28,6 @@ LibraryCatalog:
     patron's borrowed books.
 7.	get_borrowed_books(patron_id: int) to return a list of books currently borrowed by a patron.
 
-Example Usage:
-
-# Creating Books
-book1 = Book("The Catcher in the Rye", "J.D. Salinger", "9780316769488", True)
-book2 = Book("To Kill a Mockingbird", "Harper Lee", "9780061120084", True)
 
 # Creating Patrons
 patron1 = Patron("Alice Johnson", 1)
@@ -58,3 +53,21 @@ NOTE
 LibraryCatalog class allows librarians to manage books and patrons efficiently. Books can be borrowed and
 returned, and librarians can track which books are currently borrowed by each patron
 '''
+class Book:
+    def __init__(self, title, author, isbn, is_available):
+        self.title = title
+        self.author = author
+        self.isbn = isbn
+        self.is_available = is_available
+    # a function to return the attributes of the Book class
+    def get_details(self):
+        return [self.title, self.author, self.isbn, self.is_available]
+    # a helper function to present the attributes in a string format
+    def __str__(self):
+        return f"{[self.title, self.author, self.isbn, self.is_available]}"
+
+
+# Example Usage:
+# Creating Book instances
+book1 = Book("The Catcher in the Rye", "J.D. Salinger", "9780316769488", True)
+book2 = Book("To Kill a Mockingbird", "Harper Lee", "9780061120084", True)
