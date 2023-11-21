@@ -77,6 +77,13 @@ class Patron:
         return f"{[self.name, self.id, self.no_of_books_borrowed]}"
     
 
+class LibraryCatalog():
+    def __init__(self):
+        self.transactions = dict()
+        self.catalog = list()
+        self.patrons = list()
+        
+
 # Example Usage:
 # Creating Book instances
 book1 = Book("The Catcher in the Rye", "J.D. Salinger", "9780316769488", True)
