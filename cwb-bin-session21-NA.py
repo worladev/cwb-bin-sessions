@@ -89,6 +89,12 @@ class LibraryCatalog():
             self.catalog.append(book)
         else:
             print("Invalid Book")
+    
+    # a function to remove a book from the catalog based on ISBN.
+    def remove_book(self, isbn):
+        for book in self.catalog:
+            if book.isbn == isbn: #check if a book in the catalog have the same isbn number as the book passed as argument
+                self.catalog.remove(book)
         
 
 
@@ -107,3 +113,4 @@ patron2 = Patron("Bob Smith", 2)
 library = LibraryCatalog()
 library.add_book(book1)
 library.add_book(book2)
+
