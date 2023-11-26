@@ -101,7 +101,13 @@ class LibraryCatalog():
         if isinstance(patron, Patron): #check if the patron passed as argumment is a valid instance of the Patron class
             self.patrons.append(patron)
         else:
-            print("Invalid Entry")  
+            print("Invalid Entry")
+    
+    # a function to remove a patron from the system based on Patron ID.
+    def remove_patron(self, patron_id):
+        for patron in self.patrons:
+            if patron.id == patron_id: #check if a patron have the same id as the patron passed as argument
+                self.patrons.remove(patron)  
 
 
 # Example Usage:
