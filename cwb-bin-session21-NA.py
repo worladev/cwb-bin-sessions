@@ -95,7 +95,13 @@ class LibraryCatalog():
         for book in self.catalog:
             if book.isbn == isbn: #check if a book in the catalog have the same isbn number as the book passed as argument
                 self.catalog.remove(book)
-        
+    
+    # a function to add a patron to the library system.
+    def add_patron(self, patron:Patron):
+        if isinstance(patron, Patron): #check if the patron passed as argumment is a valid instance of the Patron class
+            self.patrons.append(patron)
+        else:
+            print("Invalid Entry")  
 
 
 # Example Usage:
@@ -103,14 +109,15 @@ class LibraryCatalog():
 book1 = Book("The Catcher in the Rye", "J.D. Salinger", "9780316769488", True)
 book2 = Book("To Kill a Mockingbird", "Harper Lee", "9780061120084", True)
 
-
 # Creating Patron instances
 patron1 = Patron("Alice Johnson", 1)
 patron2 = Patron("Bob Smith", 2)
-
 
 # Creating Library Catalog
 library = LibraryCatalog()
 library.add_book(book1)
 library.add_book(book2)
 
+# Creating a patron
+library.add_patron(patron1)
+library.add_patron(patron2)
