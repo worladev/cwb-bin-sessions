@@ -77,6 +77,7 @@ class Patron:
         return f"{[self.name, self.id, self.no_of_books_borrowed]}"
     
 
+# LibraryCatalog Class
 class LibraryCatalog():
     def __init__(self):
         self.transactions = dict()
@@ -107,7 +108,22 @@ class LibraryCatalog():
     def remove_patron(self, patron_id):
         for patron in self.patrons:
             if patron.id == patron_id: #check if a patron have the same id as the patron passed as argument
-                self.patrons.remove(patron)  
+                self.patrons.remove(patron)
+    
+      # a function to allow a patron to borrow a book. Update book availability and patron's borrowed books.
+    def borrow_book(self, patron_id, isbn_no):
+        for book in self.catalog:
+            if book.isbn == isbn_no and book.is_available: #check if isbn is same and the book is available
+                if patron_id not in self.transactions: #check if id does not already exist in transaction
+                    self.transactions[patron_id] = [book.title] #add id as key and book title as value
+                else:
+                    self.transactions[patron_id] += [book.title] #if id already exist, add book title to the list of values
+                book.is_available = False #set the availability of book to false
+                #increase the value for number of books borrowed by patron by 1
+                for patron in self.patrons:
+                    if patron.id == patron_id:
+                        patron.no_of_books_borrowed += 1
+                        
 
 
 # Example Usage:
@@ -127,3 +143,7 @@ library.add_book(book2)
 # Creating a patron
 library.add_patron(patron1)
 library.add_patron(patron2)
+
+# Borrowing and Returning Books
+library.borrow_book(1, "9780316769488")
+library.borrow_book(2, "9780061120084")
