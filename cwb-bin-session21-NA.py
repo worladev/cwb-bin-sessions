@@ -123,7 +123,18 @@ class LibraryCatalog():
                 for patron in self.patrons:
                     if patron.id == patron_id:
                         patron.no_of_books_borrowed += 1
-                        
+    
+     # a function to allow a patron to return a book. Update book availability and patron's borrowed books.
+    def return_book(self, patron_id, isbn_no):
+        for book in self.catalog:
+            if book.isbn == isbn_no: #check if isbn is same
+                del self.transactions[patron_id] #remove the book from transaction using the key
+                book.is_available = True           #set the availability of book to true
+                #decrease the value for number of books borrowed by patron by 1
+                for patron in self.patrons:
+                    if patron.id == patron_id:
+                        patron.no_of_books_borrowed -= 1
+    
 
 
 # Example Usage:
@@ -147,3 +158,5 @@ library.add_patron(patron2)
 # Borrowing and Returning Books
 library.borrow_book(1, "9780316769488")
 library.borrow_book(2, "9780061120084")
+
+library.return_book(1, "9780316769488")
