@@ -141,7 +141,19 @@ class LibraryCatalog():
         for key in self.transactions.keys():
             if key == patron_id: #check if there is a key representing the patron id in transactions
                 return self.transactions[patron_id] #return the list of books borrowed by patron
-        return no_borrowed_books    
+        return no_borrowed_books
+    
+    
+#     def display_book(self):
+#         for book in self.catalog:
+#             print(book)
+
+#     def display_patrons(self):
+#         for patron in self.patrons:
+#             print(patron)
+
+#     def display_transactions(self):
+#         print(self.transactions)
     
 
 
@@ -168,3 +180,7 @@ library.borrow_book(1, "9780316769488")
 library.borrow_book(2, "9780061120084")
 
 library.return_book(1, "9780316769488")
+
+# Retrieving Patron's Borrowed Books
+print(library.get_borrowed_books(1))  # Output: []
+print(library.get_borrowed_books(2))  # Output: ["To Kill a Mockingbird"]
