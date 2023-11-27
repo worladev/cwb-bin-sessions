@@ -135,6 +135,14 @@ class LibraryCatalog():
                     if patron.id == patron_id:
                         patron.no_of_books_borrowed -= 1
     
+    # a function to return a list of books currently borrowed by a patron.
+    def get_borrowed_books(self, patron_id: int):
+        no_borrowed_books = list()
+        for key in self.transactions.keys():
+            if key == patron_id: #check if there is a key representing the patron id in transactions
+                return self.transactions[patron_id] #return the list of books borrowed by patron
+        return no_borrowed_books    
+    
 
 
 # Example Usage:
