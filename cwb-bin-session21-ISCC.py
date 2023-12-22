@@ -47,6 +47,11 @@ In the given example, Alice's peak oxygen level is 97 which occurs at index 4 in
 '''
 #SOLUTION 1
 def find_peak_time(oxygen_levels):
+    
+    # return none if oxygen levels list is empty
+    if len(oxygen_levels) == 0:
+        return None
+    
     # return the index of the maximum oxygen level
     peak = oxygen_levels.index(max(oxygen_levels))
     return peak
