@@ -55,3 +55,8 @@ def find_peak_time(oxygen_levels):
     # return the index of the maximum oxygen level
     peak = oxygen_levels.index(max(oxygen_levels))
     return peak
+
+
+# Example Case:
+oxygen_levels = [85, 88, 92, 95, 97, 96, 94, 91, 89, 86, 84]
+print(find_peak_time(oxygen_levels)) # Output: 4
