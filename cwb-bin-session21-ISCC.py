@@ -94,5 +94,7 @@ def find_peak_time3(list):
     return low
 
 
-
+# Example Case:
+oxygen_levels3 = [85, 88, 92, 95, 97, 96, 94, 91, 89, 86, 84]
+print(find_peak_time3(oxygen_levels3)) # Output: 4
 
