@@ -45,7 +45,7 @@ In the given example, Alice's peak oxygen level is 97 which occurs at index 4 in
     else:
         lower = mid + 1
 '''
-#SOLUTION 1
+# SOLUTION 1 -using in-built max function
 def find_peak_time(oxygen_levels):
     
     # return none if oxygen levels list is empty
@@ -60,3 +60,14 @@ def find_peak_time(oxygen_levels):
 # Example Case:
 oxygen_levels = [85, 88, 92, 95, 97, 96, 94, 91, 89, 86, 84]
 print(find_peak_time(oxygen_levels)) # Output: 4
+
+
+# SOLUTION 2 -using linear search
+def find_peak_time2(oxygen_levels):
+    max_value = float('-inf')
+    for i in range(len(oxygen_levels)):
+        if oxygen_levels[i] > max_value:
+            max_value = oxygen_levels[i]
+            max_indx = oxygen_levels.index(max_value)
+    return max_indx
+
