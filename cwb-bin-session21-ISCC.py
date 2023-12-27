@@ -74,3 +74,6 @@ def find_peak_time2(oxygen_levels):
     return max_indx
 
 
+# Example Case:
+oxygen_levels2 = [85, 88, 92, 95, 97, 96, 94, 91, 89, 86, 84]
+print(find_peak_time2(oxygen_levels2)) # Output: 4
