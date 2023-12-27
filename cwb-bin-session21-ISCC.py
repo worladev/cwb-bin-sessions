@@ -64,10 +64,13 @@ print(find_peak_time(oxygen_levels)) # Output: 4
 
 # SOLUTION 2 -using linear search
 def find_peak_time2(oxygen_levels):
+    # using negative infinity as initial maximum value
     max_value = float('-inf')
-    for i in range(len(oxygen_levels)):
-        if oxygen_levels[i] > max_value:
-            max_value = oxygen_levels[i]
+    
+    for val in range(len(oxygen_levels)):
+        if oxygen_levels[val] > max_value:
+            max_value = oxygen_levels[val]
             max_indx = oxygen_levels.index(max_value)
     return max_indx
+
 
