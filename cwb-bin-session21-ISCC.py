@@ -77,3 +77,22 @@ def find_peak_time2(oxygen_levels):
 # Example Case:
 oxygen_levels2 = [85, 88, 92, 95, 97, 96, 94, 91, 89, 86, 84]
 print(find_peak_time2(oxygen_levels2)) # Output: 4
+
+
+# SOLUTION 3 -using binary search
+def find_peak_time3(list):
+    low = 0
+    high = len(list) - 1
+    
+    while low < high:
+        mid = low + (high-low)//2
+        if list[mid] < list[mid + 1]:
+            low = mid + 1
+        else:
+            high = mid
+    # low becomes the max_value
+    return low
+
+
+
+
