@@ -55,13 +55,21 @@ You now have 7 wrappers remaining.
 Exchange all 7 wrappers for 1 additional candy (total candies now: 50 initial + 7 exchanged + 1 exchanged = 58).
 '''
 def maxCandies(totalCandies, wrapperExchange):
-    candiesleft = totalCandies
-    maxCandies = totalCandies
-    
+    candiesleft = totalCandies # variable to hold total candies left
+    maxCandies = totalCandies # variable to hold maximum candies that can be eaten.
+
+    # loop to compute maximum candies that can be eaten
     while candiesleft >= wrapperExchange:
         extraCandy = totalCandies // wrapperExchange
         maxCandies += extraCandy
         candiesleft = extraCandy
-        totalCandies = candiesleft
-        
-    return maxCandies
+        totalCandies = candiesleft # total candies is set to candies left
+
+    return maxCandies #return maximum candies that can be eaten
+
+
+
+# Example 1:
+totalCandies = 25
+wrapperExchange = 4
+print(maxCandies(totalCandies, wrapperExchange))  # Output: 32
