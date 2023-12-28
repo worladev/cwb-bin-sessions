@@ -54,3 +54,14 @@ Exchange 49 candies for 7 additional candies (total candies now: 50 initial + 7 
 You now have 7 wrappers remaining.
 Exchange all 7 wrappers for 1 additional candy (total candies now: 50 initial + 7 exchanged + 1 exchanged = 58).
 '''
+def maxCandies(totalCandies, wrapperExchange):
+    candiesleft = totalCandies
+    maxCandies = totalCandies
+    
+    while candiesleft >= wrapperExchange:
+        extraCandy = totalCandies // wrapperExchange
+        maxCandies += extraCandy
+        candiesleft = extraCandy
+        totalCandies = candiesleft
+        
+    return maxCandies
