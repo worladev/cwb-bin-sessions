@@ -78,3 +78,9 @@ print(maxCandies(totalCandies, wrapperExchange))  # Output: 32
 totalCandies = 15
 wrapperExchange = 3
 print(maxCandies(totalCandies, wrapperExchange))  # Output: 21
+
+# Example 3:
+totalCandies = 50
+wrapperExchange = 7
+print(maxCandies(totalCandies, wrapperExchange))  # Output: 58
+
