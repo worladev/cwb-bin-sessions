@@ -73,3 +73,8 @@ def maxCandies(totalCandies, wrapperExchange):
 totalCandies = 25
 wrapperExchange = 4
 print(maxCandies(totalCandies, wrapperExchange))  # Output: 32
+
+# Example 2:
+totalCandies = 15
+wrapperExchange = 3
+print(maxCandies(totalCandies, wrapperExchange))  # Output: 21
