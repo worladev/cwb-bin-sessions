@@ -61,3 +61,23 @@ class MyQueue:
     #method to add element to the back of the queue
     def enqueue(self, element):
         self.queue.append(element)
+    
+    #method to remove and return element from the front of the queue
+    def dequeue(self):
+        if len(self.queue) == 0: #return none if queue is empty
+            return None
+        itemToDequeue = self.queue.pop(0) #get item in front of the queue
+        return itemToDequeue
+
+    #method to return element at the front of the queue
+    def peek(self):
+        itemInFront = self.queue[0]
+        return itemInFront
+    
+
+
+# Example Usage:
+my_queue = MyQueue()
+my_queue.enqueue(1)
+my_queue.enqueue(2)
+my_queue.enqueue(3)
