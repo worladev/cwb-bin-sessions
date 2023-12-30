@@ -94,3 +94,7 @@ my_queue = MyQueue()
 my_queue.enqueue(1)
 my_queue.enqueue(2)
 my_queue.enqueue(3)
+print(my_queue.size())  # Should print 3 since there are 3 element in the queue
+print(my_queue.dequeue())  # Should print 1
+print(my_queue.peek())     # Should print 2
+print(my_queue.is_empty()) # Should print False
