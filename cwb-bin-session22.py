@@ -74,6 +74,19 @@ class MyQueue:
         itemInFront = self.queue[0]
         return itemInFront
     
+    #method to return the number of element in the queue
+    def size(self):
+        sizeOfQueue = len(self.queue)
+        return sizeOfQueue
+
+    #methof to return true if the queue is empty
+    def is_empty(self):
+        length = len(self.queue)
+        if length == 0:
+            return True
+        else:
+            return False
+    
 
 
 # Example Usage:
