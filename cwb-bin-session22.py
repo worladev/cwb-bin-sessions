@@ -53,3 +53,11 @@ print(my_queue.dequeue())  # Should print 1
 print(my_queue.peek())     # Should print 2
 print(my_queue.is_empty()) # Should print False
 '''
+# SOLUTION 1
+class MyQueue:
+    def __init__(self):
+        self.queue = [] #queue initaialized as an empty list
+
+    #method to add element to the back of the queue
+    def enqueue(self, element):
+        self.queue.append(element)
