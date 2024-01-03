@@ -47,3 +47,11 @@ Products Below Average Quantity:
 Product: Widget B, Quantity: 30
 Product: Widget C, Quantity: 20
 '''
+# Defining Product class
+class Product:
+    def __init__(self, product_id, product_name, quantity, price_per_unit):
+        self.product_id = product_id
+        self.product_name = product_name
+        self.quantity = quantity
+        self.price_per_unit = price_per_unit
+
