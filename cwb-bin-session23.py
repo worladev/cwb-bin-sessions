@@ -47,7 +47,10 @@ Products Below Average Quantity:
 Product: Widget B, Quantity: 30
 Product: Widget C, Quantity: 20
 '''
-# Defining Product class
+# importing csv
+import csv
+
+# Defining Product class with attributes
 class Product:
     def __init__(self, product_id, product_name, quantity, price_per_unit):
         self.product_id = product_id
@@ -56,22 +59,22 @@ class Product:
         self.price_per_unit = price_per_unit
 
 
-# Defining Product file reader class
+# Defining Product file reader class with attributes
 class ProductFileReader:
     def __init__(self, sales_data_file):
         self.productsList = list()
         self.data_file = sales_data_file
-
+    
+    # a file reader method using the DictReader funtion for csv files.
     def read(self):
         with open(self.data_file) as data_file:
-            # self.productsList = csv.DictReader(file)
-            while line := data_file.readline():
-                data = line.rstrip('\n').split(',')
-                #split data by comma and create a Product object and then add to product list
-                newProduct = Product(data[0], data[1], data[2], data[3])
-                self.productsList.append(newProduct)
+            reader = csv.DictReader(data_file)
+            for row in reader:
+                new_product = Product(
+                    row['product_id'],
+                    row['product_name'],
+                    int(row['quantity']),
+                    float(row['price_per_unit'])
+                )
+                self.productsList.append(new_product)
         return self.productsList
-
-
-re = ProductFileReader('csvFiles/sales_data.csv')
-print(re.read())
