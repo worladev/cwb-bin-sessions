@@ -85,10 +85,18 @@ class DataAnalysis:
     def __init__(self,):
         self.read_data = ProductFileReader('csvFiles/sales_data.csv')
         self.product_list = self.read_data.read()
+        
+
+    # a method to calculate the total sales for each product
+    def totol_sales(self):
+        for product in self.product_list:
+            totalSales = int(product.quantity) * float(product.price_per_unit)
+            output = f"Product: {product.product_name}, Total Sales: ${round(totalSales, 2)}"
+            print(output)
 
 
 # creating an instance of the DataAnalysis class
 analyse_data = DataAnalysis()
-
+analyse_data.totol_sales()
       
 
