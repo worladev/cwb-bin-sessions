@@ -78,3 +78,17 @@ class ProductFileReader:
                 )
                 self.productsList.append(new_product)
         return self.productsList
+
+
+# Defining Data Analysis class to handle computations
+class DataAnalysis:
+    def __init__(self,):
+        self.read_data = ProductFileReader('csvFiles/sales_data.csv')
+        self.product_list = self.read_data.read()
+
+
+# creating an instance of the DataAnalysis class
+analyse_data = DataAnalysis()
+
+      
+
