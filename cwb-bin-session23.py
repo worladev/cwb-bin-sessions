@@ -124,5 +124,6 @@ analyse_data = DataAnalysis()
 
 # function call
 analyse_data.totol_sales()
-analyse_data.most_expensive()      
+analyse_data.most_expensive()
+analyse_data.average_quantity()      
 
