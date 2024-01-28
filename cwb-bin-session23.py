@@ -105,6 +105,18 @@ class DataAnalysis:
             else:
                 continue
         print(f"Most Expensive Product: {mostExpensive}")
+        
+    # a method to calculate the average product quantity
+    def average_quantity(self):
+        count_products = 0
+        total_product = 0
+        average_quantity = 0
+
+        for product in self.product_list:
+            total_product += int(product.quantity)
+            count_products += 1
+        average_quantity = total_product / count_products
+        print(f'Average Quantity: {average_quantity}')
 
 
 # creating an instance of the DataAnalysis class
@@ -112,6 +124,5 @@ analyse_data = DataAnalysis()
 
 # function call
 analyse_data.totol_sales()
-analyse_data.most_expensive()
-      
+analyse_data.most_expensive()      
 
