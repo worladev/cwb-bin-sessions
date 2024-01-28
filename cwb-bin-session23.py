@@ -117,6 +117,14 @@ class DataAnalysis:
             count_products += 1
         average_quantity = total_product / count_products
         print(f'Average Quantity: {average_quantity}')
+    
+    # a method to check product sales below average
+    def below_average(self):
+        product_below_average = list()
+        for product in self.product_list:
+            if int(product.quantity) < self.average_quantity(): #ERROR CODE
+                product_below_average.append(product)
+        print(f'Products below average quantity:/n {product_below_average}')
 
 
 # creating an instance of the DataAnalysis class
@@ -125,5 +133,6 @@ analyse_data = DataAnalysis()
 # function call
 analyse_data.totol_sales()
 analyse_data.most_expensive()
-analyse_data.average_quantity()      
+analyse_data.average_quantity()
+analyse_data.below_average()      
 
