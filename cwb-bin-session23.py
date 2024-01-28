@@ -93,6 +93,18 @@ class DataAnalysis:
             totalSales = int(product.quantity) * float(product.price_per_unit)
             output = f"Product: {product.product_name}, Total Sales: ${round(totalSales, 2)}"
             print(output)
+    
+    # a method to print the most expensive product
+    def most_expensive(self):
+        mostExpensive = ""
+        price = 0.0
+        for product in self.product_list:
+            if float(product.price_per_unit) > float(price):
+                price = product.price_per_unit
+                mostExpensive = product.product_name
+            else:
+                continue
+        print(f"Most Expensive Product: {mostExpensive}")
 
 
 # creating an instance of the DataAnalysis class
