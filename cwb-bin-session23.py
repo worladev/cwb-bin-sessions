@@ -109,6 +109,9 @@ class DataAnalysis:
 
 # creating an instance of the DataAnalysis class
 analyse_data = DataAnalysis()
+
+# function call
 analyse_data.totol_sales()
+analyse_data.most_expensive()
       
 
