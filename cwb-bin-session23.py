@@ -143,3 +143,11 @@ print(f"Most Expensive Product: {most_exp}")
 print('\n')
 avg = analyse_data.average_quantity()
 print(f'Average Quantity: {avg}')
+
+# below_average function call
+print('\n')
+below_avg = analyse_data.below_average()
+print("Products below average quantity")
+for product in below_avg:
+    print(f'Product: {product.product_name}, Quantity: {product.quantity}')
+
