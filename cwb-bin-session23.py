@@ -134,3 +134,12 @@ analyse_data = DataAnalysis()
 print('\n')
 analyse_data.total_sales()
 
+# most_expensive function call
+print('\n')
+most_exp = analyse_data.most_expensive()
+print(f"Most Expensive Product: {most_exp}")
+
+# average_quantity function call
+print('\n')
+avg = analyse_data.average_quantity()
+print(f'Average Quantity: {avg}')
