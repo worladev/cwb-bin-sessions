@@ -88,7 +88,7 @@ class DataAnalysis:
         
 
     # a method to calculate the total sales for each product
-    def totol_sales(self):
+    def total_sales(self):
         for product in self.product_list:
             totalSales = int(product.quantity) * float(product.price_per_unit)
             output = f"Product: {product.product_name}, Total Sales: ${round(totalSales, 2)}"
@@ -96,15 +96,15 @@ class DataAnalysis:
     
     # a method to print the most expensive product
     def most_expensive(self):
-        mostExpensive = ""
+        most_expensive = ""
         price = 0.0
         for product in self.product_list:
             if float(product.price_per_unit) > float(price):
                 price = product.price_per_unit
-                mostExpensive = product.product_name
+                most_expensive = product.product_name
             else:
                 continue
-        print(f"Most Expensive Product: {mostExpensive}")
+        return most_expensive
         
     # a method to calculate the average product quantity
     def average_quantity(self):
@@ -116,7 +116,7 @@ class DataAnalysis:
             total_product += int(product.quantity)
             count_products += 1
         average_quantity = total_product / count_products
-        print(f'Average Quantity: {average_quantity}')
+        return average_quantity
     
     # a method to check product sales below average
     def below_average(self):
@@ -124,15 +124,13 @@ class DataAnalysis:
         for product in self.product_list:
             if int(product.quantity) < self.average_quantity(): #ERROR CODE
                 product_below_average.append(product)
-        print(f'Products below average quantity:/n {product_below_average}')
+        return product_below_average
 
 
 # creating an instance of the DataAnalysis class
 analyse_data = DataAnalysis()
 
-# function call
-analyse_data.totol_sales()
-analyse_data.most_expensive()
-analyse_data.average_quantity()
-analyse_data.below_average()      
+# total_sales function call
+print('\n')
+analyse_data.total_sales()
 
