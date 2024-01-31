@@ -71,3 +71,11 @@ class ConfigType(Enum):
     DATABASE = "Database"
     API = "API"
     GENERAL = "General"
+
+# a class to handle the Database section of the config.ini file
+class ConfigDatabase:
+    def __init__(self, host, port, username, password):
+        self.host = host
+        self.port = port
+        self.username = username
+        self.password = password
