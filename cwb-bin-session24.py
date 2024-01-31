@@ -79,3 +79,8 @@ class ConfigDatabase:
         self.port = port
         self.username = username
         self.password = password
+
+# a class to handle the API section of the config.ini file
+class ConfigApi:
+    def __init__(self, key):
+        self.key = key
