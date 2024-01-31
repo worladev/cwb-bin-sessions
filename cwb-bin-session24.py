@@ -63,3 +63,11 @@ print("Database Host:", database_config.host)
 print("API Key:", api_config.key)
 print("Debug Mode:", general_config.debug)
 '''
+from enum import Enum
+import configparser
+
+# a class to handle constant enum values mapping to the sections in the config.ini file
+class ConfigType(Enum):
+    DATABASE = "Database"
+    API = "API"
+    GENERAL = "General"
