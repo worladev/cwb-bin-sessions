@@ -118,3 +118,8 @@ def load_config(filename):
 # Example Usage
 filename = "config.ini"
 configurations = load_config(filename)
+
+# configuration instances on DATABASE, API and GENERAL data
+database_config = configurations[ConfigType.DATABASE]
+api_config = configurations[ConfigType.API]
+general_config = configurations[ConfigType.GENERAL]
