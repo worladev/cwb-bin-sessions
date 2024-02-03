@@ -99,3 +99,18 @@ def createConfig(config_type, config_data):
     if config_type == ConfigType.GENERAL:
         return ConfigGeneral(**config_data)
 
+# method to read config.ini file and create a dictionary item.
+def load_config(filename):
+    # Read configurations from the file and return a dictionary with ConfigType enums as keys
+    configData = dict()
+    config = configparser.ConfigParser()
+    config.read(filename)
+    # loop through the sections in the config.ini file and create a dictionary where
+      # the section header is key and the fields, values
+    for section in config.sections():
+        config_type = ConfigType[section.upper()]
+        config_data = dict(config[section])
+        # print(config_data)
+        configData[config_type] = createConfig(config_type, config_data)
+    return configData # return the dictionary
+
