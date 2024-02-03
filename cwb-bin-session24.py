@@ -114,3 +114,7 @@ def load_config(filename):
         configData[config_type] = createConfig(config_type, config_data)
     return configData # return the dictionary
 
+
+# Example Usage
+filename = "config.ini"
+configurations = load_config(filename)
