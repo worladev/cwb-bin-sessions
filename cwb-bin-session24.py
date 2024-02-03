@@ -84,3 +84,8 @@ class ConfigDatabase:
 class ConfigApi:
     def __init__(self, key):
         self.key = key
+
+# a class to handle the General section of the config.ini file
+class ConfigGeneral:
+    def __init__(self, debug):
+        self.debug = debug
