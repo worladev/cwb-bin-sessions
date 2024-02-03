@@ -89,3 +89,13 @@ class ConfigApi:
 class ConfigGeneral:
     def __init__(self, debug):
         self.debug = debug
+        
+# method to create configuration based on the configuration type and data passed
+def createConfig(config_type, config_data):
+    if config_type == ConfigType.DATABASE:
+        return ConfigDatabase(**config_data)
+    if config_type == ConfigType.API:
+        return ConfigApi(**config_data)
+    if config_type == ConfigType.GENERAL:
+        return ConfigGeneral(**config_data)
+
