@@ -116,7 +116,7 @@ def load_config(filename):
 
 
 # Example Usage
-filename = "csvFiles/config1.ini"
+filename = "config1.ini"
 configurations = load_config(filename)
 
 # configuration instances on DATABASE, API and GENERAL data
@@ -124,6 +124,8 @@ database_config = configurations[ConfigType.DATABASE]
 api_config = configurations[ConfigType.API]
 general_config = configurations[ConfigType.GENERAL]
 
+# Test Cases
 print("Database Host:", database_config.host)
 print("Database Username:", database_config.username)
 print("API Key:", api_config.key)
+print("Debug Mode:", general_config.debug)
