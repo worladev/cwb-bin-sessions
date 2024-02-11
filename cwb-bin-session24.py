@@ -125,3 +125,4 @@ api_config = configurations[ConfigType.API]
 general_config = configurations[ConfigType.GENERAL]
 
 print("Database Host:", database_config.host)
+print("Database Username:", database_config.username)
